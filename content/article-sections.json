@@ -1,0 +1,25 @@
+{
+  "contact": {
+    "description": "Architecture firms, property developers and construction managers across 12+ countries rely on MyDesign3D for photorealistic visualization, BIM coordination and digital experiences built to scale.",
+    "title": "Ready to make your next project impossible to say no to?",
+    "button": "Talk to our team"
+  },
+  "related": {
+    "title": "Related articles",
+    "subtitle": "Specialized support for specific challenges."
+  },
+  "comments": {
+    "heading": "What do you think?",
+    "toggleLabel": "Show comments   /   Leave a comment",
+    "replyHeading": "Leave a Reply",
+    "requiredNote": "Your email address will not be published. Required fields are marked *.",
+    "commentLabel": "Comment",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "websiteLabel": "Website",
+    "rememberLabel": "Save my name, email, and website in this browser for the next time I comment.",
+    "emptyNote": "No comments yet. Be the first to share your thoughts.",
+    "successNote": "Your comment was submitted for review.",
+    "submitLabel": "Post Comment"
+  }
+}

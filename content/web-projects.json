@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Andalus Schedular",
+    "summary": "Desktop application for high school scheduling.",
+    "services": ["React", "Electron", "Dexie.js"],
+    "website": "https://schedular.ahmedatri.com/",
+    "imageUrl": "/images/web-portfolio/andalus-schedular.jpg"
+  },
+  {
+    "title": "Halal Correct",
+    "summary": "Website and administration platform for the Netherlands branch of a European halal certification company, with company information, feedback, and service applications.",
+    "services": ["Gatsby", "React", "Laravel", "MySQL"],
+    "website": "https://www.halalcorrect.com",
+    "imageUrl": "/images/web-portfolio/halal-correct.jpg"
+  },
+  {
+    "title": "Halal QMS",
+    "summary": "Website and administration platform for the Tunisia branch of a European halal certification company, with company information, feedback, and service applications.",
+    "services": ["Gatsby", "React", "Laravel", "MySQL"],
+    "website": "https://halalqmscenter.com",
+    "imageUrl": "/images/web-portfolio/halal-qms.jpg"
+  },
+  {
+    "title": "LasTime",
+    "summary": "Personal habit tracking application.",
+    "services": ["React", "Tailwind CSS", "Dexie.js"],
+    "website": "https://lastime.ahmedatri.com",
+    "imageUrl": "/images/web-portfolio/lastime.png"
+  },
+  {
+    "title": "Werewolf",
+    "summary": "Mobile companion for the Werewolf party game, replacing physical cards with randomly assigned player roles and narrator controls.",
+    "services": ["React", "Tailwind CSS", "Dexie.js", "Capacitor"],
+    "website": "https://werewolf.ahmedatri.com",
+    "imageUrl": "/images/web-portfolio/werewolf.jpg"
+  },
+  {
+    "title": "HCC France",
+    "summary": "Website and administration platform for the French branch of a European halal certification company, with company information, feedback, and service applications.",
+    "services": ["Gatsby", "React", "Laravel", "MySQL"],
+    "website": "https://halalcorrect.fr",
+    "imageUrl": "/images/web-portfolio/hcc-france.png"
+  },
+  {
+    "title": "BECSM",
+    "summary": "Website for a cargo survey company.",
+    "services": ["Gatsby", "React", "Tailwind CSS", "Laravel", "MySQL"],
+    "website": "https://becsm.com",
+    "imageUrl": "/images/web-portfolio/becsm.jpg"
+  },
+  {
+    "title": "WinWaterfall",
+    "summary": "SaaS product discovery platform for e-commerce sellers, with Stripe subscriptions and an admin dashboard for products, plans, and features.",
+    "services": ["Next.js", "Tailwind CSS", "Stripe"],
+    "website": "https://winwaterfall.com",
+    "imageUrl": "/images/web-portfolio/winwaterfall.png"
+  },
+  {
+    "title": "Mohamed Zayani — Journalist Portfolio",
+    "summary": "Multilingual journalism portfolio with a custom admin dashboard for managing experience, published work, and site content.",
+    "services": ["Next.js", "React", "TypeScript", "PostgreSQL", "Motion", "next-intl"],
+    "website": "https://mohamedzayani.com",
+    "imageUrl": "/images/web-portfolio/mohamed-zayani.png"
+  }
+]

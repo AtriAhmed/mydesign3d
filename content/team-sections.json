@@ -1,0 +1,16 @@
+{
+  "intro": { "title": "Our Team — Architects, Designers & Engineers", "description": "Have a project in mind? We'd love to hear from you." },
+  "team": {
+    "members": [
+      { "name": "Amrou Lessis", "role": "Digital Marketing Manager", "image": "/images/team-amrou-lessis.jpg" },
+      { "name": "Mahdi Bakkar", "role": "Senior IT Consultant", "image": "/images/team-mahdi-bakkar.jpg" },
+      { "name": "Nesrine Timoumi", "role": "Senior Developer", "image": "/images/team-nesrine-timoumi.jpg" },
+      { "name": "Mahdi Boujdaria", "role": "Directeur Commercial", "image": "/images/team-mahdi-boujdaria.jpg" },
+      { "name": "Hilmi Hlioui", "role": "Senior Architect", "image": "/images/team-hilmi-hlioui.jpg" }
+    ],
+    "consultationImage": "/images/team-consultation.jpg",
+    "consultationHeading": "Call now or schedule a consultation",
+    "consultationLabel": "Book a Consultation",
+    "phone": "+1 (669) 333-3661"
+  }
+}

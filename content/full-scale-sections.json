@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "eyebrow": "Full Scale Project Management — Architecture to Digital Delivery",
+    "strapline": "One Team. Every Discipline. Zero Handoffs.",
+    "title": "Full-Scale Project Management — One Team, From Concept to Completion",
+    "description": "Architecture, design, digital, and business strategy — all under one roof. You bring the vision, we handle everything else from day one to go-live.",
+    "button": "Start Your Project →",
+    "backgroundImage": "/images/reunion.jpg"
+  },
+  "story": {
+    "firstImage": "/images/full-scale-smart.jpg",
+    "firstImageAlt": "A glowing brain inside a lightbulb held in a hand",
+    "headlinePrefix": "We",
+    "headlineSuffix": "you.",
+    "rotatingWords": ["see", "hear"],
+    "firstHeading": "Most clients come to us frustrated.",
+    "firstSubheading": "Does this sound familiar?",
+    "problems": [
+      "Juggling 4 or 5 vendors who never actually coordinate with each other.",
+      "Weeks lost to handoffs, version confusion, and misaligned deliverables.",
+      "Getting beautiful files that no one can implement.",
+      "Restarting from scratch every time a new discipline is needed.",
+      "Paying for strategy, design, and tech separately — with no one owning the big picture."
+    ],
+    "secondImage": "/images/full-scale-target.jpg",
+    "secondImageAlt": "A staircase leading toward a target",
+    "secondKicker": "The good news?",
+    "secondHeading": "The Smarter Way to Build — Integrated Architecture, Design & Digital Solutions",
+    "secondSubheading": "Not step by step — from concept to operation.",
+    "secondBody": "With our Full Scale Project model, you don’t manage a patchwork of specialists. You get one integrated team that covers every discipline — architecture, design, digital, and business strategy — with a single point of contact, a unified timeline, and total accountability from start to finish."
+  },
+  "benefits": {
+    "title": "Everything Your Full-Scale Project Needs — Architecture, Design, Digital & Business",
+    "subtitle": "One engagement covers all disciplines — no extras, no gaps.",
+    "disciplines": [
+      {
+        "title": "Architecture & Design",
+        "description": "Architectural plans, BIM modeling, 3D renders, and full spatial design from concept to construction-ready documents.",
+        "image": "/images/full-scale-architecture.jpg"
+      },
+      {
+        "title": "Digital & Web",
+        "description": "Web applications, UI/UX design, brand identity, and full-stack development — engineered for performance and scale.",
+        "image": "/images/full-scale-web.jpg"
+      },
+      {
+        "title": "Business Setup",
+        "description": "Company formation, business planning, and strategic consulting — from incorporation to go-to-market readiness.",
+        "image": "/images/full-scale-business.jpg"
+      }
+    ],
+    "processTitle": "How We Deliver Your Project — Proven Full-Scale Project Management Process",
+    "processSubtitle": "A proven process, built around your timeline and goals.",
+    "learnMoreLabel": "Learn more",
+    "steps": [
+      {
+        "title": "Discover & Scope",
+        "image": "/images/full-scale-scope.jpg",
+        "description": "We start with a free consultation to map your vision, define the full scope, and assemble the right team for your specific project. No generic packages, every engagement is custom-built.",
+        "details": [
+          "Project brief & requirements workshop",
+          "Cross-discipline team assignment",
+          "Timeline and milestone planning"
+        ]
+      },
+      {
+        "title": "Design & Build",
+        "image": "/images/full-scale-design-build.jpg",
+        "description": "Our integrated team works simultaneously across architecture, UX, and development, so nothing waits on a handoff. You get a single, unified output, not disconnected deliverables.",
+        "details": [
+          "Architecture plans & 3D visualization",
+          "UI/UX design & brand identity",
+          "Web development & application engineering"
+        ]
+      },
+      {
+        "title": "Launch & Operate",
+        "image": "/images/full-scale-launch.jpg",
+        "description": "We don’t hand over files and disappear. We stay through deployment, go-live, and post-launch support making sure everything works in the real world, not just on paper.",
+        "details": [
+          "Final delivery & deployment",
+          "Final delivery & deployment",
+          "Post-launch monitoring & support"
+        ]
+      }
+    ]
+  },
+  "team": {
+    "title": "Welcome to MyDesign3D\nwhere complexity isn't an obstacle\nit's our specialty.",
+    "image": "/images/full-scale-team.jpg",
+    "imageAlt": "The MyDesign3D team",
+    "aboutButtonLabel": "Read more about us →",
+    "aboutButtonUrl": "/about",
+    "teamButtonLabel": "Meet our team →",
+    "teamButtonUrl": "/our-team",
+    "imageTitle": "Meet our team — Globally distributed.",
+    "teamDescription": "Our team operates across 5 countries — Turkey, Tunisia, Qatar, UAE, and Canada — bringing together expertise in architecture, design, and development. Majdi Boujdaria leads from Turkey; Amrou Lessis, Mahdi Bakkar, and Mahdi Boujdaria anchor the team from Tunisia; Hilmi drives operations from Qatar; Mariem Nabhen covers the UAE; and Nesrine brings her expertise from Canada. One team, one standard, no matter where in the world the work happens.",
+    "introduction": "Our team brings together architects, designers, and developers who have worked side by side since 2011. We don’t subcontract your vision to strangers — we own it, together, from the first sketch to the final deployment.",
+    "accordionItems": [
+      {
+        "title": "Who We Are",
+        "content": "We’re a multidisciplinary firm based in Wyoming, USA, operating globally across architecture, design, and digital development. One company, one culture, one standard of quality — applied across every discipline we cover."
+      },
+      {
+        "title": "Our Commitment",
+        "content": "We believe great projects fail at the seams — the gaps between teams, vendors, and disciplines. Our model eliminates those seams. One contract, one point of contact, one team accountable for the whole."
+      },
+      {
+        "title": "Our Approach",
+        "content": "We start by listening. Every Full Scale Project begins with a deep-dive discovery session — not a sales pitch. We map your goals, your constraints, and your timeline before we propose a single solution. Then we build around what you actually need."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to take the first step?",
+    "description": "Every great project starts with a conversation. Tell us what you’re building — we’ll tell you how we can make it happen.",
+    "image": "/images/full-scale-startup.jpg",
+    "formTitle": "Book a session",
+    "submitLabel": "Send your request →",
+    "expectHeading": "What to expect?",
+    "formLabels": {
+      "firstName": "Your name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone number",
+      "service": "What services are you interested in?",
+      "message": "Message"
+    },
+    "formPlaceholders": {
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "your@mail.com",
+      "phone": "+01 200 40 3032",
+      "message": "Briefly share what you’d like to discuss (optional)..."
+    },
+    "serviceOptions": ["— Full Scale Project (all disciplines)", "— Architecture & 3D Design", "— Web & Digital", "— Business Setup & Strategy", "— Not sure yet — I need guidance"],
+    "steps": [
+      {
+        "title": "Free Consultation",
+        "description": "We review your request and schedule a free 30-min discovery call to understand your project scope."
+      },
+      {
+        "title": "Proposal & Scoping",
+        "description": "We send a tailored proposal with timeline, team composition, and full cost breakdown. No surprises."
+      },
+      {
+        "title": "Project Kickoff",
+        "description": "Once aligned, your dedicated team is assembled and the project officially begins."
+      },
+      {
+        "title": "Delivery & Beyond",
+        "description": "We deliver, deploy, and stay with you through go-live and post-launch support."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently\nAsked Questions",
+    "button": "Read our FAQ’s",
+    "buttonUrl": "https://www.mydesign3d.com/faq/",
+    "questions": [
+      {
+        "question": "Q1: What exactly is a Full Scale Project?",
+        "answer": "It’s our all-in-one engagement model where a single MyDesign3D team handles architecture, design, development, and business strategy under one contract, one timeline, and one point of contact. You stop coordinating vendors; we handle everything."
+      },
+      {
+        "question": "Q2: How long does a Full Scale Project typically take?",
+        "answer": "It depends on scope. A digital + branding project typically runs 6–12 weeks. A full architecture + digital engagement can range from 3 to 12 months. We define the exact timeline during the discovery phase before any commitment."
+      },
+      {
+        "question": "Q3: Do I need to use all disciplines, or can I pick specific ones?",
+        "answer": "You can. The Full Scale model is our flagship offering, but we also work on individual discipline projects. If you only need a web platform or only architectural design, we can scope that separately."
+      },
+      {
+        "question": "Q4: What types of clients do you work with?",
+        "answer": "We work with startups, real estate developers, enterprises, and entrepreneurs across industries — from retail and hospitality to tech and professional services. If your project requires multiple disciplines, we’re built for it."
+      },
+      {
+        "question": "Q5: How is pricing structured?",
+        "answer": "We provide fixed-price proposals based on scope — no hourly billing surprises. Every proposal includes a full breakdown by discipline, milestone, and deliverable. Consultation is always free."
+      }
+    ]
+  }
+}

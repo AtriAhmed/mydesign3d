@@ -1,0 +1,88 @@
+[
+  {
+    "label": "About",
+    "href": "/about"
+  },
+  {
+    "label": "Services",
+    "href": "/#services",
+    "children": [
+      {
+        "label": "Full Scale Project Management — Architecture to Digital Delivery",
+        "href": "/full-scale-project"
+      },
+      {
+        "label": "Architecture & Design",
+        "href": "/architectural-design-bim",
+        "children": [
+          {
+            "label": "3D Visualization & Rendering",
+            "href": "/3d-visualization-rendering"
+          },
+          {
+            "label": "Architectural Design & BIM",
+            "href": "/architectural-design-bim"
+          }
+        ]
+      },
+      {
+        "label": "Digital factory",
+        "href": "/web-development-application-engineering",
+        "children": [
+          {
+            "label": "Web Development & Application Engineering",
+            "href": "/web-development-application-engineering"
+          },
+          {
+            "label": "UI/UX Design & Brand Identity",
+            "href": "/ux-ui-design-brand-identity"
+          }
+        ]
+      },
+      {
+        "label": "Company Setup",
+        "href": "/company-setup",
+        "children": [
+          {
+            "label": "Business Planning & Company Formation",
+            "href": "/company-setup"
+          },
+          {
+            "label": "Strategic Consultation",
+            "href": "/strategic-consultation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Portfolio",
+    "href": "/portfolio",
+    "children": [
+      {
+        "label": "Architecture & 3D",
+        "href": "/portfolio"
+      },
+      {
+        "label": "Web Development",
+        "href": "/portfolio/web-development"
+      }
+    ]
+  },
+  {
+    "label": "Our Team — Architects, Designers & Engineers",
+    "href": "/our-team"
+  },
+  {
+    "label": "Contact",
+    "href": "/contact-us"
+  },
+  {
+    "label": "Blog",
+    "href": "/blog"
+  },
+  {
+    "label": "Pricing",
+    "href": "/pricing"
+  }
+]

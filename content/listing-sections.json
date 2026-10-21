@@ -1,0 +1,5 @@
+{
+  "blog": { "intro": { "title": "Blog", "description": "Have a project in mind? We'd love to hear from you." } },
+  "portfolio": { "intro": { "title": "Selected Works", "description": "Architecture, interior design, and 3D visualization projects from our studio.", "allLabel": "All", "interiorLabel": "Interior Design", "exteriorLabel": "Exterior Design", "loadMoreLabel": "Load More" } },
+  "webPortfolio": { "intro": { "eyebrow": "Selected Works / Digital", "title": "Web Development", "description": "Websites and applications deserve more than a thumbnail. Explore each project through its purpose, experience, and technical delivery.", "emptyEyebrow": "Digital portfolio", "emptyTitle": "Web case studies are coming soon.", "emptyDescription": "We’re preparing a closer look at the websites and applications our team has built. Each case study will show the challenge, our approach, and the finished experience.", "emptyCta": "Discuss a web project" } }
+}

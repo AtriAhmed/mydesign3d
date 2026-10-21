@@ -1,0 +1,17 @@
+{
+  "/": { "title": "MyDesign3D — Architecture, 3D Visualization & Web Solutions", "description": "Architecture, design, and digital solutions from MyDesign3D." },
+  "/about": { "title": "About MyDesign3D — A Studio Built on Craft and Precision", "description": "Learn about the MyDesign3D studio, its values, approach, and multidisciplinary team." },
+  "/3d-visualization-rendering": { "title": "3D Visualization & Architectural Rendering Services", "description": "3D visualization and architectural rendering services from MyDesign3D." },
+  "/architectural-design-bim": { "title": "Architectural Design & BIM Services — Technical Solutions", "description": "Architectural design, BIM, design development, and technical solutions for architecture, construction, and product teams." },
+  "/blog": { "title": "Blog | MyDesign3D", "description": "Have a project in mind? We'd love to hear from you." },
+  "/company-setup": { "title": "Business Planning & Company Formation — Business Plans, Company Setup & Launch Strategy", "description": "Investor-ready business plans and company formation support for entrepreneurs, startups, and established businesses." },
+  "/contact-us": { "title": "Contact MyDesign3D — Let’s Build Something Together", "description": "Have a project in mind? We'd love to hear from you." },
+  "/full-scale-project": { "title": "Full Scale Project Management — Architecture to Digital Delivery", "description": "Architecture, design, digital, and business strategy delivered by one team, from concept to completion." },
+  "/our-team": { "title": "Our Team — Architects, Designers & Engineers | MyDesign3D", "description": "Have a project in mind? We'd love to hear from you." },
+  "/portfolio": { "title": "Architecture & 3D Portfolio | MyDesign3D", "description": "Explore MyDesign3D projects in architecture, interior design, and visualization." },
+  "/portfolio/web-development": { "title": "Web Development Projects | MyDesign3D", "description": "Explore web development and application engineering projects from MyDesign3D." },
+  "/pricing": { "title": "Pricing | MyDesign3D", "description": "Indicative starting rates for architecture, design, web development, and business services from MyDesign3D." },
+  "/strategic-consultation": { "title": "Strategic Consultation — Business Strategy, Market Positioning & Growth Advisory", "description": "Expert strategic guidance for businesses that need clarity, direction, and results." },
+  "/ux-ui-design-brand-identity": { "title": "UI/UX Design & Brand Identity — User Experience, Visual Identity & Design Systems", "description": "UI/UX design, brand identity, and graphic design for intuitive digital products and cohesive visual experiences." },
+  "/web-development-application-engineering": { "title": "Web Development & Application Engineering — Custom Websites, Web Apps & AI Integration", "description": "Scalable websites, business platforms, and web applications with API connectivity and AI integration." }
+}

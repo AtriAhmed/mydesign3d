@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "videoUrl": "https://www.mydesign3d.com/wp-content/uploads/2026/02/5946481_Office_Rendering_3840x2160.mp4",
+    "disciplines": ["Design", "Architecture", "Digital Factory"],
+    "heading": "Multidisciplinary Design & Technology Firm — Architecture, 3D Visualization & Web Solutions",
+    "tagline": "One Team. Every Solution. From Concept to Operation.",
+    "ctaLabel": "Book a Free Consultation"
+  },
+  "about": {
+    "heading": "MYDESIGN3D",
+    "expertise": "25+ Years of Combined Expertise · Based in Wyoming, USA · Operating Globally",
+    "description": "Most agencies offer one thing. We bring architecture, design, development, and business strategy under one roof, with one team and one clear vision. Whether you’re launching a new company, developing a real estate project, or building a digital platform, MyDesign3D brings together the right experts at every stage. From architectural blueprints to deployed web applications and brand identity, we handle the full journey so you don’t have to coordinate multiple vendors.",
+    "ctaLabel": "Learn more",
+    "ctaUrl": "/about",
+    "videoUrl": "https://www.mydesign3d.com/wp-content/uploads/2026/05/LOGO-ANIMATIONS-1x1-2.mp4"
+  },
+  "expertise": {
+    "headingPrefix": "Our",
+    "headingAccent": "expertises",
+    "items": [
+      { "name": "Architecture & Design", "image": null, "services": [{ "label": "3D Visualization & Rendering", "path": "3d-visualization-rendering" }, { "label": "Architectural Design & BIM", "path": "architectural-design-bim" }] },
+      { "name": "Digital Factory", "image": "/images/expertise-web.jpg", "services": [{ "label": "Web Development & Application Engineering", "path": "web-development-application-engineering" }, { "label": "UI/UX Design & Brand Identity", "path": "ux-ui-design-brand-identity" }] },
+      { "name": "Company Setup", "image": "/images/expertise-company.jpg", "services": [{ "label": "Strategic Consultation", "path": "strategic-consultation" }, { "label": "Business Planning & Company Formation", "path": "company-setup" }] },
+      { "name": "Full Scale Projects", "image": "/images/expertise-projects.jpg", "services": [{ "label": "Full Scale Projects", "path": "full-scale-project" }] }
+    ]
+  },
+  "projects": {
+    "heading": "One client. One team. End to end.",
+    "subtitle": "What's included in a Full-Scale Project",
+    "titlePrefix": "Full",
+    "titleAccent": "Scale",
+    "titleSuffix": "Projects",
+    "image": "/images/full-scale-project.jpg",
+    "imageAlt": "An overhead view of a round meeting table with chairs and an illustration of a business strategy at its center",
+    "leftServices": ["Architectural Design & BIM", "3D Visualization & Rendering", "Web Development & Application Engineering"],
+    "rightServices": [{ "label": "UI/UX Design & Brand Identity", "path": "ux-ui-design-brand-identity" }, { "label": "Business Planning & Company Formation", "path": "company-setup" }, { "label": "Strategic Consultation", "path": "strategic-consultation" }],
+    "descriptionTitle": "Built for Full-Scale Ambition",
+    "description": "Some clients come to us with a single need. Others arrive with a vision and need a complete team to bring it to life. Our Full-Scale Projects service was designed for those clients, businesses, developers, and entrepreneurs who want a single point of accountability from day one to launch day.",
+    "ctaLabel": "See What's Included →",
+    "ctaUrl": "/full-scale-project"
+  },
+  "whyUs": {
+    "heading": "Why companies choose MyDesign3D",
+    "services": [{ "label": "Architecture & Design", "path": "services/full-scale-projects" }, { "label": "Digital Factory", "path": "web-development-web-applications" }, { "label": "Company Setup", "path": "services/business-plan" }, { "label": "Full-Scale Projects", "path": "services/full-scale-projects" }],
+    "reasons": [
+      { "title": "Multidisciplinary Team", "description": "Architects, designers, and developers working together. No handoff delays, no communication gaps." },
+      { "title": "US-Based, Globally Delivered", "description": "Incorporated in Wyoming, USA. We operate remotely and on-site across North America, Europe, and beyond." },
+      { "title": "From Day 1 to Go-Live", "description": "We don’t deliver files and disappear. We stay engaged from the first consultation through deployment, launch, and post-project support." },
+      { "title": "Transparent Process", "description": "Every project starts with a clear scope, timeline, and budget. You always know where your project stands." }
+    ]
+  },
+  "clients": {
+    "heading": "Trusted by businesses across industries",
+    "description": "From startups to established companies, we've helped organizations build, design, and grow.",
+    "companyCount": "50 +",
+    "companyCaption": "companies cared for",
+    "reviewCount": "20+",
+    "reviewCaption": "Reviews",
+    "reviewUrl": "https://maps.app.goo.gl/zyoEdhhVZ9SfBm51A",
+    "portraits": ["/images/client-pexels-cottonbro-4098357-300x300.jpg", "/images/client-pexels-shkrabaanthony-7579364-300x300.jpg", "/images/client-pexels-rdne-9065264-300x300.jpg"],
+    "logos": [
+      { "file": "linventeur.png", "name": "L’Inventeur", "width": 482, "height": 66 },
+      { "file": "icones-02.png", "name": "Watan Training Education", "width": 962, "height": 456 },
+      { "file": "Dimensione-Eco-casa-logo-NEW-2048x693-1.png", "name": "Dimensione Ecocasa", "width": 2048, "height": 693 },
+      { "file": "el_empiro-trading-logo-noir-01.png", "name": "Il Empiro Trading", "width": 532, "height": 296 },
+      { "file": "imperial_industrial_logo.png", "name": "Imperial Investment Group", "width": 533, "height": 147 },
+      { "file": "saltana.png", "name": "Saltana Architecture d’intérieur", "width": 1662, "height": 861 },
+      { "file": "new_logo_artizone.png", "name": "Artizone", "width": 522, "height": 223 },
+      { "file": "WhatsApp-Image-2023-04-07-at-02.14.38.jpg", "name": "Client company logo", "width": 456, "height": 153 },
+      { "file": "logo.png", "name": "Client company logo", "width": 149, "height": 100 },
+      { "file": "vw-logo-3298-1.png", "name": "Volkswagen", "width": 791, "height": 748 },
+      { "file": "signature-02.png", "name": "Signature", "width": 1470, "height": 705 },
+      { "file": "yildirim-1.png", "name": "Yildirim", "width": 225, "height": 135 },
+      { "file": "business-card-aymen-dentist-08.png", "name": "Aymen Dental Practice", "width": 369, "height": 240 }
+    ]
+  },
+  "contact": {
+    "backgroundImage": "/images/contact-background.jpg",
+    "heading": "Ready to build something great?",
+    "description": "Tell us about your project. We'll put together the right team and the right plan — within 48 hours.",
+    "phone": "+16693333661",
+    "ctaLabel": "Book a Free Consultation",
+    "ctaUrl": "/contact-us"
+  }
+}

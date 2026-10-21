@@ -1,0 +1,37 @@
+{
+  "intro": {
+    "title": "Pricing",
+    "eyebrow": "One team · Every solution",
+    "headingLineOne": "Pricing built around",
+    "headingLineTwo": "your project, not ours",
+    "description": "Indicative starting rates. Architecture, design, web development, and business services — delivered remotely under one roof. Final quote depends on scope; we adapt to your region & budget."
+  },
+  "architecture": {
+    "heading": "Architecture & Design",
+    "services": [
+      { "title": "Architectural Design & BIM", "price": "$15", "unit": "/ m²", "description": "Architectural design, BIM modeling & documentation, delivered remotely under your brand.", "detail": "BIM modeling from $1/m² · Hourly from $40/h", "featured": true },
+      { "title": "3D Visualization & Rendering", "price": "$199", "unit": "/ image", "description": "Photorealistic exterior & interior renders for marketing, sales & approvals." },
+      { "title": "Strategic Consultation", "price": "$90", "unit": "/ hour", "description": "Expert advisory across design, technology & delivery strategy." }
+    ]
+  },
+  "technology": {
+    "heading": "Web, Brand & Business",
+    "quoteLabel": "Custom quote",
+    "services": [
+      { "title": "Web Development", "description": "Full-stack apps & software engineering." },
+      { "title": "UI/UX & Brand Identity", "description": "Interface design & visual identity." },
+      { "title": "Business Planning", "description": "Company formation & strategy." }
+    ]
+  },
+  "process": {
+    "heading": "How we work",
+    "steps": ["Free discovery call — we scope your need", "Tailored proposal — one team, every service", "Production by our team (design / development)", "End-to-end delivery & support"]
+  },
+  "quote": {
+    "heading": "Get a tailored quote",
+    "description": "Pricing adapts to your region & project scale. Let’s scope it together.",
+    "ctaLabel": "Book a free consult →",
+    "ctaUrl": "https://www.mydesign3d.com/book-a-free-consult/",
+    "note": "Indicative starting prices in USD. Final quote depends on scope, region & complexity."
+  }
+}

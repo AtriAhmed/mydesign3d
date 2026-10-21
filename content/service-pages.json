@@ -1,0 +1,896 @@
+[
+  {
+    "title": "3d Visualization Rendering",
+    "path": "/3d-visualization-rendering",
+    "sections": {
+      "hero": {
+        "variant": "visualization",
+        "titleId": "visualization-hero-title",
+        "breadcrumb": "3D Visualization & Rendering",
+        "seoTitle": "3D Visualization & Rendering Services — Photorealistic Renders, Animation & VR Walkthroughs",
+        "seoTag": "h2",
+        "seoPlacement": "before",
+        "headlinePrefix": "Visualization for",
+        "rotatingWords": [
+          "Architecture",
+          "Real Estate",
+          "Product Designer"
+        ],
+        "description": "We create photorealistic renders, animations, 360° panoramas, and VR walkthroughs that help you present, validate, and sell your ideas with clarity and impact.",
+        "benefits": [
+          "High-end visual solutions",
+          "Cost-effective delivery"
+        ],
+        "imageSrc": "/images/visualization-hospital.jpg",
+        "imageAlt": "Photorealistic rendering of a modern hospital at sunset"
+      },
+      "tools": {},
+      "process": {
+        "titleId": "visualization-process-title",
+        "imageSrc": "/images/visualization-interior-stairs.jpg",
+        "imageAlt": "Photorealistic rendering of a contemporary interior staircase",
+        "imageHeading": "Photorealistic results",
+        "imageCaption": "High-end visuals designed to communicate ideas with clarity and impact.",
+        "heading": "How we bring ideas to life",
+        "subtitle": "Visualization that supports decisions, presentations, and sales",
+        "description": "We help architects, developers, designers, and product-focused businesses turn concepts into clear, compelling visual assets. From photorealistic renders to immersive virtual walkthroughs, our team delivers visuals that improve communication, accelerate approvals, and strengthen project presentations.",
+        "ctaLabel": "Learn more"
+      },
+      "offer": {
+        "titleId": "visualization-offer-title",
+        "subtitle": "Advanced visualization services tailored to your project needs",
+        "imageSrc": "/images/visualization-service.png",
+        "imageAlt": "Photorealistic rendering of a contemporary villa interior",
+        "services": [
+          {
+            "title": "3D Rendering",
+            "description": "Photorealistic still images that present your project with clarity, realism, and visual impact."
+          },
+          {
+            "title": "VR Walkthroughs",
+            "description": "Virtual experiences that allow users to move through spaces and engage with projects before execution."
+          },
+          {
+            "title": "3D Animation",
+            "description": "Dynamic visual storytelling that helps clients and stakeholders better understand spaces, products, and concepts."
+          },
+          {
+            "title": "360° Panorama",
+            "description": "Interactive panoramic views that offer a more immersive way to explore and present your designs."
+          }
+        ]
+      },
+      "different": {
+        "titleId": "visualization-different-title",
+        "subtitle": "A multidisciplinary approach built for quality, speed, and flexibility",
+        "imageSrc": "/images/visualization-different.jpg",
+        "imageAlt": "Contemporary design studio with workstations and pendant lights",
+        "reasons": [
+          {
+            "title": "Multidisciplinary Expert Team",
+            "description": "We bring together specialists in architecture, BIM, interior design, product design, 3D visualization, animation, and immersive experiences to support projects from concept to delivery."
+          },
+          {
+            "title": "Fast and Efficient Execution",
+            "description": "Our streamlined workflow allows us to deliver high-quality outputs quickly, helping clients move faster without compromising visual or technical standards."
+          },
+          {
+            "title": "Cost-Effective Collaboration",
+            "description": "We provide scalable support and optimized production processes that reduce overhead while maintaining premium results."
+          }
+        ]
+      },
+      "contact": {
+        "sectionId": "visualization-contact",
+        "titleId": "visualization-contact-title",
+        "title": "Let’s discuss your next project",
+        "introduction": "Tell us about your project and our team will get back to you with the right visualization solution.",
+        "imageSrc": "/images/visualization-contact.png",
+        "imageAlt": "Design team reviewing architectural plans together",
+        "services": [
+          "3D Rendering",
+          "3D Animation",
+          "360° Panorama",
+          "VR Walkthroughs",
+          "Interior Visualization",
+          "Product Visualization",
+          "Custom Request"
+        ],
+        "inquiryType": "3D visualization"
+      },
+      "pricing": {
+        "titleId": "visualization-pricing-title",
+        "title": "3D Visualization & Rendering",
+        "startingPrice": "From $199 / image",
+        "description": "Photorealistic renders and walkthroughs for architecture and real estate. Per-image cost drops with volume (same model reused).",
+        "columnLabel": "Deliverable",
+        "rows": [
+          {
+            "service": "Interior render",
+            "startingAt": "from $199/image"
+          },
+          {
+            "service": "Exterior render",
+            "startingAt": "from $349/image"
+          },
+          {
+            "service": "Walkthrough animation (60s)",
+            "startingAt": "from $2,000"
+          }
+        ],
+        "ctaLabel": "Request a quote"
+      }
+    }
+  },
+  {
+    "title": "Architectural Design Bim",
+    "path": "/architectural-design-bim",
+    "sections": {
+      "hero": {
+        "variant": "architecture",
+        "titleId": "architecture-hero-title",
+        "breadcrumb": "Architectural Design & BIM",
+        "seoTitle": "Architectural Design & BIM Services — Technical Solutions for Architecture, Construction & Product Teams",
+        "seoTag": "h1",
+        "seoPlacement": "after",
+        "headlinePrefix": "BIM",
+        "rotatingWords": [
+          "Families",
+          "Design",
+          "Technical Innovation"
+        ],
+        "description": "We support architecture, construction, and product-focused teams with BIM, design development, and technical solutions built for precision, speed, and long-term efficiency.",
+        "benefits": [
+          "Technical accuracy",
+          "Cost-effective delivery"
+        ],
+        "imageSrc": "/images/architecture-bim-hero.png",
+        "imageAlt": "Architectural rendering of a modern house with technical elevation drawings"
+      },
+      "tools": {},
+      "process": {
+        "titleId": "architecture-process-title",
+        "imageSrc": "/images/architecture-process.png",
+        "imageAlt": "Architectural concept sketch transforming into a finished interior",
+        "imageHeading": "Technical precision",
+        "imageCaption": "Structured design solutions built for coordination, accuracy, and execution.",
+        "heading": "How we turn concepts into buildable solutions",
+        "subtitle": "Design and technical support that improves accuracy, coordination, and delivery",
+        "description": "We help architecture, construction, and product-focused teams develop clear, efficient, and technically sound solutions. From BIM services and BIM families to architectural, interior, and product design, our multidisciplinary team supports every stage with precision and practical expertise.",
+        "ctaLabel": "Discuss your project"
+      },
+      "offer": {
+        "titleId": "architecture-offer-title",
+        "subtitle": "Design and technical solutions tailored to your project needs",
+        "imageSrc": "/images/architecture-offer.png",
+        "imageAlt": "Architectural rendering overlaid with technical drawings",
+        "services": [
+          {
+            "title": "Architectural Design",
+            "description": "Architectural design solutions that combine aesthetics, functionality, and technical feasibility, with interior design integrated when required."
+          },
+          {
+            "title": "Product Design",
+            "description": "Design support for products and components developed with attention to usability, detail, and production logic."
+          },
+          {
+            "title": "BIM Services",
+            "description": "Structured BIM support that improves coordination, documentation, and project efficiency across all stages."
+          },
+          {
+            "title": "BIM Families",
+            "description": "Custom BIM families developed with precision to match your technical, functional, and project standards."
+          }
+        ]
+      },
+      "different": {
+        "titleId": "architecture-different-title",
+        "subtitle": "A multidisciplinary approach built for precision, speed, and scalability",
+        "imageSrc": "/images/architecture-different.jpg",
+        "imageAlt": "Modern office interior with workstations and pendant lights",
+        "reasons": [
+          {
+            "title": "Multidisciplinary Expert Team",
+            "description": "We bring together specialists in architecture, BIM, interior design, product design, and technical development to support projects from concept to delivery."
+          },
+          {
+            "title": "Fast and Efficient Execution",
+            "description": "Our streamlined workflow helps deliver accurate, high-quality outputs quickly while maintaining technical and design standards."
+          },
+          {
+            "title": "Cost-Effective Collaboration",
+            "description": "We provide scalable support and optimized processes that reduce overhead while maintaining premium results."
+          }
+        ]
+      },
+      "contact": {
+        "sectionId": "architecture-contact",
+        "titleId": "architecture-contact-title",
+        "title": "Let’s discuss your next project",
+        "introduction": "Tell us about your project and our team will get back to you with the right solution for your needs.",
+        "imageSrc": "/images/architecture-contact.png",
+        "imageAlt": "Architect reviewing plans and material samples at a desk",
+        "services": [
+          "BIM Services",
+          "BIM Families",
+          "Architectural Design",
+          "Interior Design",
+          "Product Design",
+          "Technical Support",
+          "Custom Request"
+        ],
+        "inquiryType": "architectural design and BIM"
+      },
+      "pricing": {
+        "titleId": "architecture-pricing-title",
+        "title": "Architectural Design & BIM",
+        "startingPrice": "From $15 / m²",
+        "description": "Architectural design, BIM modeling and documentation, delivered remotely under your brand. Production-only packages available.",
+        "columnLabel": "Service",
+        "rows": [
+          {
+            "service": "Architectural design",
+            "startingAt": "from $15/m²"
+          },
+          {
+            "service": "BIM modeling",
+            "startingAt": "from $1/m²"
+          },
+          {
+            "service": "Hourly",
+            "startingAt": "from $40/h"
+          }
+        ],
+        "ctaLabel": "Request a quote"
+      }
+    }
+  },
+  {
+    "title": "Company Setup",
+    "path": "/company-setup",
+    "sections": {
+      "hero": {
+        "variant": "company",
+        "titleId": "company-setup-hero-title",
+        "breadcrumb": "Business Planning & Company Formation",
+        "seoTitle": "Business Planning & Company Formation — Business Plans, Company Setup & Launch Strategy",
+        "seoTag": "h1",
+        "seoPlacement": "before",
+        "headlinePrefix": "Business Planning",
+        "rotatingWords": [
+          "Company Formation",
+          ""
+        ],
+        "description": "We help entrepreneurs, startups, and established businesses build structured, investor-ready plans and navigate the company formation process with clarity and confidence.",
+        "benefits": [
+          "Investor-Ready Plans",
+          "End-to-End Support"
+        ],
+        "imageSrc": "/images/company-setup-hero.jpg",
+        "imageAlt": "Business growth chart and launch strategy displayed in a meeting room"
+      },
+      "process": {
+        "titleId": "company-setup-process-title",
+        "imageSrc": "/images/company-setup-process.png",
+        "imageAlt": "Translucent cube illustrating structured planning and precision",
+        "imageHeading": "Technical precision",
+        "imageCaption": "Structured design solutions built for coordination, accuracy, and execution.",
+        "heading": "How we turn your vision into a viable business",
+        "subtitle": "Strategic support that accelerates launch, growth, and investment readiness",
+        "description": "We work with founders, entrepreneurs, and growing companies to develop clear business plans, define market positioning, and structure the legal and operational framework for a successful launch. From financial projections to company registration, our team handles the complexity so you can focus on execution.",
+        "ctaLabel": "Discuss your project"
+      },
+      "offer": {
+        "titleId": "company-setup-offer-title",
+        "subtitle": "Strategic and operational solutions for your business launch",
+        "imageSrc": "/images/company-setup-offer.jpg",
+        "imageAlt": "Business consultant speaking through a headset beside a laptop",
+        "services": [
+          {
+            "title": "Financial Projections",
+            "description": "Detailed revenue models, cost structures, and cash flow forecasts built to meet investor and banking standards."
+          },
+          {
+            "title": "Company Formation",
+            "description": "Full support for legal structure selection, registration, and administrative setup — tailored to your country and business type."
+          },
+          {
+            "title": "Business Plan Development",
+            "description": "Professionally structured plans that present your vision, define your market, and outline a clear financial and operational strategy."
+          },
+          {
+            "title": "Market Analysis",
+            "description": "In-depth research on your industry, competitors, and target audience to support confident positioning and strategic decision-making."
+          }
+        ]
+      },
+      "different": {
+        "titleId": "company-setup-different-title",
+        "subtitle": "A strategic approach built for clarity, credibility, and growth",
+        "imageSrc": "/images/company-setup-different.jpg",
+        "imageAlt": "Business team meeting around a conference table",
+        "reasons": [
+          {
+            "title": "Multidisciplinary Expertise",
+            "description": "We combine business strategy, financial modeling, legal structuring, and branding expertise under one roof."
+          },
+          {
+            "title": "Tailored for Your Context",
+            "description": "Every plan is built around your specific market, goals, and stage — not adapted from a generic template."
+          },
+          {
+            "title": "End-to-End Support",
+            "description": "From the first strategy session to final document delivery and company registration, we manage the full process."
+          }
+        ]
+      },
+      "contact": {
+        "sectionId": "company-setup-contact",
+        "titleId": "company-setup-contact-title",
+        "title": "Let’s discuss your next project",
+        "introduction": "Tell us about your business or project and our team will get back to you with the right solution.",
+        "imageSrc": "/images/company-setup-contact.jpg",
+        "imageAlt": "Professional working in a modern office lit with purple light",
+        "services": [
+          "Business Plan Development",
+          "Market Analysis & Research",
+          "Financial Projections",
+          "Company Formation",
+          "Full Business Setup Package",
+          "Custom Request"
+        ],
+        "inquiryType": "Company setup"
+      },
+      "pricing": {
+        "titleId": "company-setup-pricing-title",
+        "title": "Business Planning & Company Formation",
+        "startingPrice": "From $1,200",
+        "description": "Investor-ready business plans, company formation and go-to-market strategy for ventures expanding internationally.",
+        "columnLabel": "Service",
+        "rows": [
+          {
+            "service": "Business plan",
+            "startingAt": "from $1,200"
+          },
+          {
+            "service": "Company formation",
+            "startingAt": "from $900"
+          },
+          {
+            "service": "Strategy session",
+            "startingAt": "from $150"
+          }
+        ],
+        "ctaLabel": "Book a free consult"
+      }
+    }
+  },
+  {
+    "title": "Contact Us",
+    "path": "/contact-us",
+    "sections": {
+      "contact": {
+        "sectionId": "contact-form",
+        "titleId": "contact-form-title",
+        "title": "Get in Touch",
+        "introduction": "Tell us about your project, timeline, and goals. We will get back to you to discuss the best way to support your needs.",
+        "imageSrc": "/images/contact-teams.jpg",
+        "imageAlt": "MyDesign3D team portrait",
+        "imageHeading": "24/7",
+        "imageCaption": "dedicated support",
+        "inquiryType": "Contact",
+        "serviceLabel": "What services are you interested in?",
+        "submitLabel": "Submit"
+      }
+    }
+  },
+  {
+    "title": "Full Scale Project",
+    "path": "/full-scale-project",
+    "sections": {
+      "pricing": {
+        "titleId": "full-scale-pricing-heading",
+        "title": "Full-Scale Project Management",
+        "startingPrice": "From $3,000 / month",
+        "description": "End-to-end delivery from concept to operation — architecture, development and infrastructure under a single accountable team.",
+        "columnLabel": "Model",
+        "rows": [
+          {
+            "service": "Project management retainer",
+            "startingAt": "from $3,000/mo"
+          },
+          {
+            "service": "Or, % of project value",
+            "startingAt": "8–12%"
+          }
+        ],
+        "ctaLabel": "Book a free consult"
+      }
+    }
+  },
+  {
+    "title": "Strategic Consultation",
+    "path": "/strategic-consultation",
+    "sections": {
+      "hero": {
+        "variant": "strategic",
+        "titleId": "strategic-consultation-hero-title",
+        "breadcrumb": "Strategic Consultation",
+        "seoTitle": "Strategic Consultation — Business Strategy, Market Positioning & Growth Advisory",
+        "seoTag": "h1",
+        "seoPlacement": "before",
+        "headlinePrefix": "Strategic",
+        "rotatingWords": [
+          "Consultation",
+          ""
+        ],
+        "description": "Expert strategic guidance for businesses that need clarity, direction, and results.",
+        "benefits": [
+          "Strategic clarity",
+          "Measurable results"
+        ],
+        "imageSrc": "/images/strategic-consultation-hero.png",
+        "imageAlt": "Conference room overlooking a city at sunset",
+        "ctaLabel": "Book a Consultation"
+      },
+      "process": {
+        "titleId": "strategic-consultation-process-title",
+        "imageSrc": "/images/strategic-consultation-process.jpg",
+        "imageAlt": "Open strategy notebook with a pen and planning notes",
+        "imageHeading": "Strategic thinking",
+        "imageCaption": "Structured design solutions built for coordination, accuracy, and execution.",
+        "heading": "How we help businesses make better decisions",
+        "subtitle": "Professional consultancy tailored to your challenges and goals",
+        "description": "We work with businesses to assess challenges, identify opportunities, and develop practical strategies that drive real, sustainable growth.",
+        "ctaLabel": "Learn about our approach"
+      },
+      "offer": {
+        "titleId": "strategic-consultation-offer-title",
+        "subtitle": "Design and technical solutions tailored to your project needs",
+        "imageSrc": "/images/strategic-consultation-offer.jpg",
+        "imageAlt": "Growth chart and planning diagram arranged on a round table",
+        "services": [
+          {
+            "title": "Growth Planning",
+            "description": "Identifying growth levers, new market opportunities, and strategic priorities that move the business forward."
+          },
+          {
+            "title": "Performance Advisory",
+            "description": "Ongoing expert support to monitor performance, adapt strategy, and ensure decisions lead to measurable outcomes."
+          },
+          {
+            "title": "Business Strategy",
+            "description": "Defining clear objectives, competitive positioning, and actionable roadmaps aligned with your market reality."
+          },
+          {
+            "title": "Operations Consulting",
+            "description": "Analyzing and optimizing internal processes to improve efficiency, reduce friction, and scale sustainably."
+          }
+        ]
+      },
+      "different": {
+        "titleId": "strategic-consultation-different-title",
+        "subtitle": "A multidisciplinary approach built for precision, speed, and scalability",
+        "imageSrc": "/images/strategic-consultation-different.jpg",
+        "imageAlt": "Modern consultation office with seating around a low table",
+        "reasons": [
+          {
+            "title": "Multidisciplinary Expert Team",
+            "description": "Cross-Industry Expertise — We bring strategic experience across multiple sectors to provide grounded, relevant guidance."
+          },
+          {
+            "title": "Fast and Efficient Execution",
+            "description": "Practical, Actionable Advice — No abstract frameworks. Our recommendations are built to be implemented and deliver results."
+          },
+          {
+            "title": "Cost-Effective Collaboration",
+            "description": "Tailored to Your Context — Every strategy is developed around your specific business, goals, and constraints."
+          }
+        ]
+      },
+      "contact": {
+        "sectionId": "strategic-consultation-contact",
+        "titleId": "strategic-consultation-contact-title",
+        "title": "Let’s discuss your next project",
+        "introduction": "Tell us about your project and our team will get back to you with the right solution for your needs.",
+        "imageSrc": "/images/company-setup-contact.jpg",
+        "imageAlt": "Professional working in a modern office lit with purple light",
+        "services": [
+          "Business Strategy",
+          "Operations Consulting",
+          "Growth Planning",
+          "Performance Advisory",
+          "Custom Consultation"
+        ],
+        "inquiryType": "Strategic consultation"
+      },
+      "pricing": {
+        "titleId": "strategic-consultation-pricing-title",
+        "title": "Strategic Consultation",
+        "startingPrice": "From $90 / hour",
+        "description": "Strategic advisory across design, technology and operations — one team, every solution.",
+        "columnLabel": "Format",
+        "rows": [
+          {
+            "service": "Strategy session (90 min)",
+            "startingAt": "from $250"
+          },
+          {
+            "service": "Hourly",
+            "startingAt": "from $90/h"
+          },
+          {
+            "service": "Monthly advisory retainer",
+            "startingAt": "from $2,500"
+          }
+        ],
+        "ctaLabel": "Book a free consult"
+      }
+    }
+  },
+  {
+    "title": "Ux Ui Design Brand Identity",
+    "path": "/ux-ui-design-brand-identity",
+    "sections": {
+      "hero": {
+        "variant": "ux",
+        "titleId": "ux-ui-hero-title",
+        "breadcrumb": "UI/UX Design & Brand Identity",
+        "seoTitle": "UI/UX Design & Brand Identity — User Experience, Visual Identity & Design Systems",
+        "seoTag": "h1",
+        "seoPlacement": "before",
+        "headlinePrefix": "",
+        "rotatingWords": [
+          "UI/UX Design",
+          "Brand Identity",
+          "Graphic Design"
+        ],
+        "description": "We create intuitive digital experiences and distinctive visual identities that help businesses connect with their audiences. From user research and interface design to brand systems and graphics, our team turns complex ideas into clear, consistent designs.",
+        "benefits": [
+          "Strategic design",
+          "Reliable performance"
+        ]
+      },
+      "tools": {
+        "tools": [
+          {
+            "name": "Figma",
+            "src": "/images/ux-tools/Figma-Logo-300x169.png",
+            "width": 300,
+            "height": 169
+          },
+          {
+            "name": "Adobe XD",
+            "src": "/images/ux-tools/xd@logotyp.us_-300x293.png",
+            "width": 300,
+            "height": 293
+          },
+          {
+            "name": "Framer",
+            "src": "/images/ux-tools/framer_logo_icon_169150-300x150.png",
+            "width": 300,
+            "height": 150
+          },
+          {
+            "name": "Webflow",
+            "src": "/images/ux-tools/webflow@logotyp.us_-300x214.png",
+            "width": 300,
+            "height": 214
+          },
+          {
+            "name": "Adobe Illustrator",
+            "src": "/images/ux-tools/Illustrator-Logo-300x187.png",
+            "width": 300,
+            "height": 187
+          },
+          {
+            "name": "Adobe Photoshop",
+            "src": "/images/ux-tools/Photoshop-logo-300x169.png",
+            "width": 300,
+            "height": 169
+          },
+          {
+            "name": "Adobe InDesign",
+            "src": "/images/ux-tools/Adobe-InDesign-Logo-300x188.png",
+            "width": 300,
+            "height": 188
+          }
+        ]
+      },
+      "process": {
+        "titleId": "ux-ui-process-title",
+        "imageHeading": "Designed with purpose",
+        "imageCaption": "Creative systems built for clarity, consistency, and meaningful user experiences.",
+        "heading": "How we create design systems and brand experiences that connect",
+        "subtitle": "Strategic design for clarity, consistency, and user experience",
+        "description": "We help businesses and growing brands create clear, engaging, and visually consistent digital experiences. From UI/UX design and brand identity to graphic design systems and communication assets, our team combines strategic thinking with creative execution to build design solutions that strengthen perception, improve usability, and support long-term brand growth.",
+        "ctaLabel": "Discuss your project"
+      },
+      "offer": {
+        "titleId": "ux-ui-offer-title",
+        "subtitle": "Design services tailored to your brand, users, and business goals",
+        "imageSrc": "/images/ux-offer.png",
+        "imageAlt": "Brand and interface designs displayed on a desktop monitor in a design studio",
+        "services": [
+          {
+            "title": "Graphic Design",
+            "description": "Creative visual assets developed for communication, promotion, presentation, and consistent brand expression across touchpoints."
+          },
+          {
+            "title": "Design Systems & Marketing Assets",
+            "description": "Structured design systems and branded materials that support consistency, efficiency, and long-term visual impact."
+          },
+          {
+            "title": "UI/UX Design",
+            "description": "User-centered interfaces designed to improve usability, clarity, and digital experience across web and mobile products."
+          },
+          {
+            "title": "Brand Identity",
+            "description": "Visual identities built to express your brand clearly through logo systems, typography, color palettes, and cohesive design language."
+          }
+        ]
+      },
+      "different": {
+        "titleId": "ux-ui-different-title",
+        "subtitle": "Design expertise built for clarity, consistency, and creative impact",
+        "imageSrc": "/images/expertise-web.jpg",
+        "imageAlt": "Interface design concept with connected screens and visual elements",
+        "reasons": [
+          {
+            "title": "Strategic Design Thinking",
+            "description": "We combine creative direction, user understanding, and brand strategy to design solutions with purpose and impact."
+          },
+          {
+            "title": "Visual Consistency Across Touchpoints",
+            "description": "We create cohesive visual systems that strengthen recognition, improve communication, and support long-term brand value."
+          },
+          {
+            "title": "User-Centered Creative Execution",
+            "description": "Our approach balances aesthetics and usability to deliver experiences that are both visually refined and effective."
+          }
+        ]
+      },
+      "contact": {
+        "sectionId": "ux-ui-contact",
+        "titleId": "ux-ui-contact-title",
+        "title": "Let’s discuss your next creative project",
+        "introduction": "Tell us about your brand, design, or user experience needs and our team will help you shape the right creative solution.",
+        "imageSrc": "/images/web-contact.png",
+        "imageAlt": "Team reviewing a digital interface together",
+        "imageHeading": "Tailored Creative Solutions",
+        "imageCaption": "Flexible collaboration adapted to your brand goals, audience, and design needs.",
+        "services": [
+          "UI/UX Design",
+          "Brand Identity",
+          "Graphic Design",
+          "Design Systems",
+          "Marketing Assets",
+          "Presentation Design",
+          "Custom Request"
+        ],
+        "inquiryType": "UI/UX design"
+      },
+      "pricing": {
+        "titleId": "ux-ui-pricing-title",
+        "title": "UI/UX Design & Brand Identity",
+        "startingPrice": "From $50 / hour",
+        "description": "Interfaces, design systems and visual identity that convert — at nearshore rates, typically 40% below US/EU studios.",
+        "columnLabel": "Package",
+        "rows": [
+          {
+            "service": "UI/UX design (project)",
+            "startingAt": "from $6,000"
+          },
+          {
+            "service": "Brand identity package",
+            "startingAt": "from $2,500"
+          },
+          {
+            "service": "Hourly",
+            "startingAt": "from $50/h"
+          }
+        ],
+        "ctaLabel": "Request a quote"
+      }
+    }
+  },
+  {
+    "title": "Web Development Application Engineering",
+    "path": "/web-development-application-engineering",
+    "sections": {
+      "hero": {
+        "variant": "web",
+        "titleId": "web-development-hero-title",
+        "breadcrumb": "Web Development & Application Engineering",
+        "seoTitle": "Web Development & Application Engineering — Custom Websites, Web Apps & AI Integration",
+        "seoTag": "h1",
+        "seoPlacement": "before",
+        "headlinePrefix": "Full-Stack",
+        "rotatingWords": [
+          "Web Development",
+          "Web Applications"
+        ],
+        "description": "We build scalable websites, business platforms, and intelligent web applications powered by modern technologies, cloud infrastructure, API connectivity, and AI integration.",
+        "benefits": [
+          "Scalable architecture",
+          "Intelligent integration"
+        ],
+        "imageSrc": "/images/web-development-hero.png",
+        "imageAlt": "Developers working on web applications at a row of monitors"
+      },
+      "tools": {
+        "tools": [
+          {
+            "name": "Angular",
+            "src": "/images/web-tools/angular_logo_icon_169598-300x150.png",
+            "width": 300,
+            "height": 150
+          },
+          {
+            "name": "Node.js",
+            "src": "/images/web-tools/nodejs_logo_icon_168945-300x150.png",
+            "width": 300,
+            "height": 150
+          },
+          {
+            "name": "Amazon Web Services",
+            "src": "/images/web-tools/Amazon_Web_Services-Logo.wine_-300x200.png",
+            "width": 300,
+            "height": 200
+          },
+          {
+            "name": "React",
+            "src": "/images/web-tools/reactjs_logo_icon_170805-300x150.png",
+            "width": 300,
+            "height": 150
+          },
+          {
+            "name": "MongoDB",
+            "src": "/images/web-tools/MongoDB_Logo.svg-300x81.png",
+            "width": 300,
+            "height": 81
+          },
+          {
+            "name": "PostgreSQL",
+            "src": "/images/web-tools/PostgreSQL-Logo-300x188.png",
+            "width": 300,
+            "height": 188
+          },
+          {
+            "name": "Docker",
+            "src": "/images/web-tools/Docker_Logo-300x68.png",
+            "width": 300,
+            "height": 68
+          },
+          {
+            "name": "Python",
+            "src": "/images/web-tools/Python-Logo-300x188.png",
+            "width": 300,
+            "height": 188
+          }
+        ]
+      },
+      "process": {
+        "titleId": "web-development-process-title",
+        "imageSrc": "/images/web-process.png",
+        "imageAlt": "Developers working together on web applications at a shared desk",
+        "imageHeading": "Built for performance",
+        "imageCaption": "Scalable digital solutions designed for speed, reliability, and long-term growth.",
+        "heading": "How we build digital solutions that perform",
+        "subtitle": "Full-stack expertise for modern business needs",
+        "description": "We help startups, businesses, and growing companies turn ideas into reliable digital products. From websites and custom web applications to cloud-ready platforms, ERP connectivity, secure payments, and AI-powered features, our team combines technical expertise with practical execution to build solutions that support real business growth.",
+        "ctaLabel": "Discuss your project"
+      },
+      "offer": {
+        "titleId": "web-development-offer-title",
+        "subtitle": "Web development services tailored to your business goals",
+        "imageSrc": "/images/web-offer.png",
+        "imageAlt": "Business analytics dashboard displayed on a desktop computer",
+        "services": [
+          {
+            "title": "AI, LLM & API Integration",
+            "description": "Connected solutions powered by third-party APIs, intelligent automation, language models, and advanced digital workflows."
+          },
+          {
+            "title": "ERP, Sage & Payment Integration",
+            "description": "Business system integration including Sage connectivity, secure payment gateways, and workflow automation."
+          },
+          {
+            "title": "Custom Websites",
+            "description": "Professional, responsive websites designed to strengthen your online presence and support your business objectives."
+          },
+          {
+            "title": "Web Applications & Business Platforms",
+            "description": "Custom digital platforms, portals, dashboards, and business tools built to streamline operations and support growth."
+          }
+        ]
+      },
+      "different": {
+        "titleId": "web-development-different-title",
+        "subtitle": "A multidisciplinary approach built for precision, speed, and scalability",
+        "imageSrc": "/images/web-different.png",
+        "imageAlt": "Web development team working together in a modern office",
+        "reasons": [
+          {
+            "title": "Full-Stack Expertise",
+            "description": "We bring together frontend, backend, database, cloud, integration, and AI capabilities to deliver complete digital solutions."
+          },
+          {
+            "title": "Scalable and Efficient Delivery",
+            "description": "Our workflow is built to deliver reliable, high-performance solutions with speed, structure, and long-term scalability."
+          },
+          {
+            "title": "Business-Oriented Collaboration",
+            "description": "We adapt to your goals, timelines, and technical requirements with a practical approach focused on real business value."
+          }
+        ]
+      },
+      "contact": {
+        "sectionId": "web-development-contact",
+        "titleId": "web-development-contact-title",
+        "title": "Let’s discuss your next digital project",
+        "introduction": "Tell us about your business needs and our team will help you define the right web solution for your goals.",
+        "imageSrc": "/images/web-contact.png",
+        "imageAlt": "Web development team discussing a project around a desktop computer",
+        "imageHeading": "Tailored Digital Solutions",
+        "imageCaption": "Flexible collaboration adapted to your business goals, timeline, and technical needs.",
+        "services": [
+          "Custom Website",
+          "Web Application",
+          "Business Platform",
+          "Frontend & Backend Development",
+          "AI, LLM & API Integration",
+          "ERP & Sage Integration",
+          "Secure Payment Integration",
+          "SEO & Performance Optimization",
+          "Maintenance & Support",
+          "Custom Request"
+        ],
+        "inquiryType": "web development",
+        "locations": [
+          {
+            "name": "New York, NY",
+            "address": "65 West 58th Street, Suite 512\nNew York, NY 10019",
+            "phone": "(422) 820 820",
+            "phoneHref": "tel:422820820"
+          },
+          {
+            "name": "Washington, DC",
+            "address": "4800 Riverbend Avenue NW, Suite 410\nWashington, DC 20016",
+            "phone": "(202) 555-0148",
+            "phoneHref": "tel:2025550148"
+          },
+          {
+            "name": "Northern Virginia",
+            "address": "1620 Oakridge Parkway, Suite 530\nVienna, VA 22182",
+            "phone": "(703) 555-0192",
+            "phoneHref": "tel:7035550192"
+          }
+        ]
+      },
+      "pricing": {
+        "titleId": "web-development-pricing-title",
+        "title": "Web Development & App Engineering",
+        "startingPrice": "From $50 / hour",
+        "description": "Full-stack web apps and software engineering, built by vetted remote engineers in your timezone.",
+        "columnLabel": "Region",
+        "valueColumnLabel": "Rate",
+        "rows": [
+          {
+            "service": "USA / Switzerland",
+            "startingAt": "from $70/h"
+          },
+          {
+            "service": "UK / Germany / Canada",
+            "startingAt": "from $60/h"
+          },
+          {
+            "service": "Rest of Europe",
+            "startingAt": "from $50/h"
+          }
+        ],
+        "ctaLabel": "Book a free scoping call"
+      }
+    }
+  }
+]

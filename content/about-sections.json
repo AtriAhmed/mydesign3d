@@ -1,0 +1,51 @@
+{
+  "intro": { "title": "About MyDesign3D — A Studio Built on Craft and Precision" },
+  "story": {
+    "eyebrow": "We Build What Others Only Imagine.",
+    "heading": "Our Story",
+    "description": "Founded in 2011 and headquartered in Sheridan, Wyoming, MyDesign3D operates at the intersection of design excellence and technological precision. We serve clients across the United States, Europe, and the Middle East — providing end-to-end expertise that eliminates the complexity of managing multiple agencies.",
+    "image": "/images/about-story.jpg",
+    "ctaLabel": "Book a Free Consultation"
+  },
+  "values": {
+    "image": "/images/about-values.jpg",
+    "imageWord": "together",
+    "items": [
+      { "title": "Our Values", "description": "We deliver world-class design and technology solutions that are visually compelling, technically sound, and built to perform — regardless of scale, sector, or geography." },
+      { "title": "Our vision", "description": "To be the leading multidisciplinary firm trusted by businesses worldwide to transform their spaces, systems, and digital presence." },
+      { "title": "Meet the Team", "description": "To deliver integrated architecture, design, and technology solutions through a single accountable team — from first brief to final delivery." }
+    ]
+  },
+  "whyHeading": { "heading": "Why Choose Us", "subtitle": "One team. Every discipline. Zero compromise." },
+  "benefits": {
+    "image": "/images/about-business.jpg",
+    "ctaLabel": "Book a Consultation",
+    "items": [
+      { "title": "Integrated Expertise", "description": "Architecture, design, and digital — one team, one vision, one point of contact." },
+      { "title": "International Reach", "description": "Projects delivered across the US, Europe, and the Middle East." },
+      { "title": "14 Years of Experience", "description": "Proven across residential, commercial, hospitality, and enterprise projects since 2011." },
+      { "title": "End-to-End Accountability", "description": "From first brief to final delivery — we own the entire process." }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "subtitle": "Delivering integrated solutions that drive real results",
+    "items": [
+      { "title": "Proven Results", "description": "14 years of successful project delivery across architecture, design, and technology." },
+      { "title": "Client-Centric Collaboration", "description": "we work as an extension of your team, transparent, responsive, and fully invested in your success." },
+      { "title": "Quality & Precision", "description": "Every deliverable meets international standards of quality, detail, and professional execution." }
+    ]
+  },
+  "location": {
+    "image": "/images/about-location.jpg",
+    "heading": "We are always",
+    "officeHeading": "Our Office",
+    "headingAccent": "here to help you",
+    "city": "Sheridan, Wyoming",
+    "address": "ST 62959, Sheridan – WY 82801",
+    "phone": "+1 (669) 333-3661",
+    "email": "hello@mydesign3d.com",
+    "mapUrl": "https://www.google.com/maps/search/Sheridan+WY+82801+USA",
+    "ctaLabel": "Get direction"
+  }
+}

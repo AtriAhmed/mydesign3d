@@ -1,0 +1,15 @@
+{
+  "intro": { "title": "Contact MyDesign3D — Let’s Build Something Together", "description": "Have a project in mind? We'd love to hear from you." },
+  "location": {
+    "image": "/images/about-location.jpg",
+    "heading": "Our Office",
+    "officeHeading": "Our Office",
+    "headingAccent": "",
+    "city": "Sheridan, Wyoming",
+    "address": "ST 62959, Sheridan- WY 82801",
+    "phone": "+1 (669) 333-3661",
+    "email": "hello@mydesign3d.com",
+    "mapUrl": "https://www.google.com/maps/search/Sheridan+WY+82801+USA",
+    "ctaLabel": "Get direction"
+  }
+}

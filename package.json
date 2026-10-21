@@ -6,12 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cms:seed": "node --experimental-strip-types --env-file=.env.local scripts/seed-content.mjs",
+    "cms:types": "node --experimental-strip-types --env-file=.env.local --input-type=module -e 'import config from \"./payload.config.ts\"; import {generateTypes} from \"./node_modules/payload/dist/bin/generateTypes.js\"; await generateTypes(await config)'"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "^3.91.0",
+    "@payloadcms/next": "^3.91.0",
+    "@payloadcms/richtext-lexical": "^3.91.0",
+    "graphql": "^16.14.2",
+    "motion": "^14.2.0",
     "next": "16.4.0",
+    "payload": "^3.91.0",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "sharp": "^0.35.5",
+    "swiper": "^14.3.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",

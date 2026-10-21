@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MyDesign3D
 
-## Getting Started
+Next.js website with a Payload CMS admin dashboard backed by PostgreSQL.
 
-First, run the development server:
+## Local setup
+
+Use Node 22 (`nvm use` reads `.nvmrc`), then install dependencies with `npm install`. Install PostgreSQL 17 and start a local server. Copy `.env.example` to `.env.local`, set a real `DATABASE_URL` and a long random `PAYLOAD_SECRET`, then run:
 
 ```bash
+npm run cms:seed
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The current development database is stored in the ignored `.data/postgres` directory and listens on port 5433. To restart that existing database with Homebrew PostgreSQL 17:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+/opt/homebrew/opt/postgresql@17/bin/pg_ctl -D .data/postgres -o '-h 127.0.0.1 -p 5433 -k /tmp' -l .data/postgres.log start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open `http://localhost:3000/admin` and create the first administrator. Subsequent visits use the login page. The public site remains available at its existing URLs.
 
-## Learn More
+## Editing content
 
-To learn more about Next.js, take a look at the following resources:
+- **Website → Pages:** choose a page by its `path`, then edit its section tabs. Text, images, links, lists, form copy, pricing, and SEO title/description are editable. List items can be added, removed, or reordered. An advanced JSON view is available for unusual structures.
+- **Website → Site Settings:** branding and logo paths, the consultation destination, contact details, shared navigation, service form labels, and footer text. Navigation items can be added, removed, or reordered.
+- **Content → Posts:** article titles, excerpts, dates, images, category, and article body. New posts use the rich-text `body` field; seeded posts also have legacy `blocks` content.
+- **Content → Comments:** reader submissions arrive as `pending`. Review each comment and set its status to `approved` to display it on the article, or `rejected` to keep it private. Email addresses are stored for moderation and are never displayed publicly.
+- **Content → Projects:** architecture and web portfolio items, images, summaries, links, and display order.
+- **Content → Media:** upload replacement images and use their URLs in page sections. Post and project records can link directly to uploads.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`npm run cms:seed` imports missing starter content and leaves existing edits intact. For schema changes, run `npm run cms:types`. Media is stored in the ignored `media/` directory; production hosting needs persistent storage for both PostgreSQL and uploaded media. Configure a production `DATABASE_URL`, `PAYLOAD_SECRET`, and `NEXT_PUBLIC_SITE_URL` before deployment.
