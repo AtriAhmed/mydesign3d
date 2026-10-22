@@ -1,0 +1,145 @@
+/* Public theme colors. The brand purple remains dark on both themes so white
+   text and the familiar consultation buttons retain their contrast. */
+.site-theme-toggle {
+  background: #fff;
+  border-color: #352a4433;
+  color: #352a44;
+}
+
+html[data-theme="dark"] {
+  --theme-page: #15111b;
+  --theme-surface: #241d2b;
+  --theme-surface-soft: #1d1724;
+  --theme-mint: #1b4034;
+  --theme-text: #f4edf5;
+  --theme-muted: #cbbfd2;
+  --theme-line: #54475c;
+}
+
+html[data-theme="dark"] ::selection { background: #b99ac9; color: #17111d; }
+html[data-theme="dark"] .site-theme-toggle { background: #352a44; border-color: #796b82; color: #e9fff4; }
+
+/* Common Tailwind surfaces used across the public pages. */
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] [class~="bg-[#fafaf7]"],
+html[data-theme="dark"] [class~="bg-[#fbfaf7]"],
+html[data-theme="dark"] [class~="bg-[#ffffffcc]"],
+html[data-theme="dark"] [class~="bg-[#ffffffb3]"] { background-color: var(--theme-surface); }
+
+html[data-theme="dark"] .bg-cream,
+html[data-theme="dark"] [class~="bg-[#f8f6f7]"],
+html[data-theme="dark"] [class~="bg-[#f7f4f8]"],
+html[data-theme="dark"] [class~="bg-[#f4eff6]"],
+html[data-theme="dark"] [class~="bg-[#f0eaf3]"],
+html[data-theme="dark"] [class~="bg-[#efefef]"] { background-color: var(--theme-surface-soft); }
+
+html[data-theme="dark"] .bg-mint,
+html[data-theme="dark"] [class~="bg-[#e9fff4]"] { background-color: var(--theme-mint); }
+
+html[data-theme="dark"] [class~="bg-[#f7d2ff]"] { background-color: #4e3151; }
+html[data-theme="dark"] .bg-white\/90,
+html[data-theme="dark"] .bg-white\/80,
+html[data-theme="dark"] .bg-white\/70 { background-color: #302738e6; }
+html[data-theme="dark"] .bg-brand\/10,
+html[data-theme="dark"] .bg-brand\/15,
+html[data-theme="dark"] .bg-brand\/20 { background-color: #b69ac126; }
+html[data-theme="dark"] [class~="bg-[#0000001a]"],
+html[data-theme="dark"] [class~="bg-[#e2e2e2]"] { background-color: var(--theme-line); }
+
+/* On light-colored sections the original purple and gray text needs light
+   equivalents. The cream/mint lettering on purple buttons stays as designed. */
+html[data-theme="dark"] .text-brand,
+html[data-theme="dark"] .text-brand\/70,
+html[data-theme="dark"] .text-brand\/65,
+html[data-theme="dark"] .text-brand\/60,
+html[data-theme="dark"] .text-brand\/80,
+html[data-theme="dark"] [class~="text-[#383838]"],
+html[data-theme="dark"] [class~="text-[#070807e5]"] { color: var(--theme-text); }
+
+html[data-theme="dark"] [class~="text-[#5a4f63]"],
+html[data-theme="dark"] [class~="text-[#6a5f73]"],
+html[data-theme="dark"] [class~="text-[#777]"],
+html[data-theme="dark"] [class~="text-[#6b7280]"],
+html[data-theme="dark"] [class~="text-[#7f8390]"],
+html[data-theme="dark"] [class~="text-[#9a8aa5]"],
+html[data-theme="dark"] [class~="text-[#9a7fb0]"],
+html[data-theme="dark"] [class~="text-[#352a4499]"] { color: var(--theme-muted); }
+
+html[data-theme="dark"] .border-brand\/10,
+html[data-theme="dark"] .border-brand\/15,
+html[data-theme="dark"] .border-brand\/20,
+html[data-theme="dark"] .border-brand,
+html[data-theme="dark"] .border-black\/10,
+html[data-theme="dark"] [class~="border-[#0000001a]"],
+html[data-theme="dark"] [class~="border-[#e2e2e2]"],
+html[data-theme="dark"] [class~="border-[#e3d8ec]"] { border-color: var(--theme-line); }
+html[data-theme="dark"] .focus-visible\:outline-brand:focus-visible { outline-color: #d7bfdf; }
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select { color-scheme: dark; }
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder { color: #aa9caf; }
+
+/* Header logo artwork has dark lettering. Keep its original light ground. */
+html[data-theme="dark"] .site-header-logo { background: #fff; border-radius: 999px; }
+html[data-theme="dark"] .site-header-header,
+html[data-theme="dark"] .site-header-navigation,
+html[data-theme="dark"] .site-header-submenu { color: var(--theme-text); }
+html[data-theme="dark"] .site-header-link:hover,
+html[data-theme="dark"] .site-header-link:focus-visible { color: #e9fff4; }
+html[data-theme="dark"] .site-header-submenu .site-header-linkRow:hover,
+html[data-theme="dark"] .site-header-submenu .site-header-linkRow:focus-within {
+  background-color: #3a2e43;
+}
+html[data-theme="dark"] .site-footer-contact svg { color: var(--theme-muted); }
+html[data-theme="dark"] .site-footer-contact a:hover,
+html[data-theme="dark"] .site-footer-navigation a:hover,
+html[data-theme="dark"] .site-footer-navigation summary:hover { color: #e9fff4; }
+
+/* Large blended areas and image fades carry the appropriate section color. */
+html[data-theme="dark"] .home-projects { background: radial-gradient(ellipse at center, #1c352c 20%, var(--theme-page) 65%); }
+html[data-theme="dark"] .home-projects [class*="after:bg-[linear-gradient"]::after { background: linear-gradient(180deg, transparent, #15111bcc); }
+html[data-theme="dark"] .home-about::before,
+html[data-theme="dark"] .site-footer::before { background: radial-gradient(ellipse at center, #204033 0%, #1b342b 35%, transparent 72%); }
+html[data-theme="dark"] .home-contact-content { background: linear-gradient(180deg, #15111b00, var(--theme-page) 40%); }
+html[data-theme="dark"] .home-expertise-details::before { background: linear-gradient(180deg, #241d2b00 25%, var(--theme-surface) 45%); }
+html[data-theme="dark"] .about-story,
+html[data-theme="dark"] .about-location { background: linear-gradient(180deg, #1b352c, var(--theme-surface-soft)); }
+
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#faf2ea00_0%,#fff_100%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#ffffff00_0%,#fff_40%)]"] { background: linear-gradient(180deg, transparent, var(--theme-page)); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#f2fff8_0%,#faf2ea_100%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#f2fff8_0%,#faf2ea_20%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#f2fff8_0%,#faf2ea_40%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#fff_20%,#f2fff8_100%)]"] { background: linear-gradient(180deg, #1b352c, var(--theme-surface-soft)); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#faf2ea00,#faf2ea)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#faf2ea00_0%,#faf2ea_100%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#FAF2EA00_0%,#FAF2EA_100%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(to_bottom,transparent_0%,#faf2ea_100%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,transparent_0%,#faf2ea_95%)]"] { background: linear-gradient(180deg, transparent, var(--theme-surface-soft)); }
+/* The incoming story slide must be opaque by 10%, just like its light theme
+   gradient, so the outgoing sticky slide cannot show through its content. */
+html[data-theme="dark"] #slide2 { background: linear-gradient(180deg, transparent 0%, var(--theme-surface-soft) 10%); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#e9fff400_0%,#f2fff8_95%)]"] { background: linear-gradient(180deg, transparent, #1b352c); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#fff0_0%,#fff_95%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,transparent_0%,white_95%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(to_bottom,transparent_0%,transparent_60%,white_100%)]"] { background: linear-gradient(180deg, transparent, var(--theme-page)); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(90deg,#FAF2EA_0%,#352A4400_100%)]"] { background: linear-gradient(90deg, #1d1724, transparent); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(124deg,#FAF2EA_40%,#E9FFF400_60%)]"],
+html[data-theme="dark"] [class*="bg-[linear-gradient(190deg,transparent_40%,#FAF2EA_80%)]"] { background: linear-gradient(180deg, transparent, var(--theme-surface-soft)); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(180deg,#FAF2EA_65%,#FAF2EA00_100%)]"] { background: linear-gradient(180deg, var(--theme-surface-soft) 65%, transparent); }
+html[data-theme="dark"] [class*="bg-[radial-gradient(at_top_left,#E9FFF4_0%,transparent_30vw)]"]::before { background: radial-gradient(at top left, #214034, transparent 30vw); }
+html[data-theme="dark"] [class*="bg-[linear-gradient(135deg,#e9fff4_0%,#f7d2ff_60%,#e4d1f0_100%)]"] { background: linear-gradient(135deg, #1b4034, #503854 60%, #352a44); }
+html[data-theme="dark"] [class*="bg-[radial-gradient(circle_at_70%_30%,#e9fff4_0%,#d8c4e5_55%,#8c709f_100%)]"] { background: radial-gradient(circle at 70% 30%, #1b4034, #503854 55%, #352a44); }
+html[data-theme="dark"] .via-cream\/60.to-cream { background-image: linear-gradient(to bottom, transparent, #1d1724 75%); }
+
+/* Keep hover states legible after changing the base utility colors. */
+html[data-theme="dark"] .hover\:bg-mint:hover,
+html[data-theme="dark"] .focus-visible\:bg-mint:focus-visible { background-color: #315949; }
+html[data-theme="dark"] .hover\:text-brand:hover,
+html[data-theme="dark"] .focus-visible\:text-brand:focus-visible { color: var(--theme-text); }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-theme-toggle { transition: none; }
+}

@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    'project-videos': ProjectVideo;
     pages: Page;
     posts: Post;
     comments: Comment;
@@ -82,6 +83,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    'project-videos': ProjectVideosSelect<false> | ProjectVideosSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     comments: CommentsSelect<false> | CommentsSelect<true>;
@@ -163,6 +165,25 @@ export interface User {
 export interface Media {
   id: number;
   alt: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "project-videos".
+ */
+export interface ProjectVideo {
+  id: number;
+  title: string;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -291,12 +312,16 @@ export interface Project {
     | null;
   image?: (number | null) | Media;
   /**
-   * Existing image path, until you upload a replacement.
+   * Existing image path, or an optional poster for a video project.
    */
   imageUrl?: string | null;
   imageAlt?: string | null;
   imageWidth?: number | null;
   imageHeight?: number | null;
+  /**
+   * Optional MP4 or WebM. When set, the portfolio displays this video instead of the image; the image becomes its poster.
+   */
+  video?: (number | null) | ProjectVideo;
   website?: string | null;
   sortOrder?: number | null;
   updatedAt: string;
@@ -333,6 +358,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'project-videos';
+        value: number | ProjectVideo;
       } | null)
     | ({
         relationTo: 'pages';
@@ -436,6 +465,24 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "project-videos_select".
+ */
+export interface ProjectVideosSelect<T extends boolean = true> {
+  title?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
@@ -498,6 +545,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   imageAlt?: T;
   imageWidth?: T;
   imageHeight?: T;
+  video?: T;
   website?: T;
   sortOrder?: T;
   updatedAt?: T;

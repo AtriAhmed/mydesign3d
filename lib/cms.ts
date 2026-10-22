@@ -53,7 +53,7 @@ export type BlogPost = {
   body?: unknown;
 };
 
-function imageUrl(upload: unknown, fallback?: string | null) {
+function uploadUrl(upload: unknown, fallback?: string | null) {
   if (upload && typeof upload === "object" && "url" in upload && typeof upload.url === "string") return upload.url;
   return fallback || undefined;
 }
@@ -74,7 +74,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     title: post.title,
     date: postDate(post.publishedAt),
     excerpt: post.excerpt || "",
-    image: imageUrl(post.featuredImage, post.featuredImageUrl),
+    image: uploadUrl(post.featuredImage, post.featuredImageUrl),
     href: `/blog/${post.slug}/`,
     publishedAt: post.publishedAt || "",
     category: post.category || "Non classé",
@@ -106,6 +106,7 @@ export type CmsProject = {
   category: "exterior" | "interior" | "web";
   summary: string;
   src: string;
+  videoUrl?: string;
   alt: string;
   width: number;
   height: number;
@@ -123,7 +124,8 @@ export async function getProjects(): Promise<CmsProject[]> {
     title: project.title,
     category: project.category as CmsProject["category"],
     summary: project.summary || "",
-    src: imageUrl(project.image, project.imageUrl) || "",
+    src: uploadUrl(project.image, project.imageUrl) || "",
+    videoUrl: uploadUrl(project.video),
     alt: project.imageAlt || project.title,
     width: project.imageWidth || 1024,
     height: project.imageHeight || 576,

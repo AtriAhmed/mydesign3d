@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import BrandArrow from "../../components/brand-arrow";
 import ArticleComments, { type ArticleCommentsContent } from "../../components/article-comments";
 import ArticleBookIcon from "../../components/article-book-icon";
@@ -48,7 +49,20 @@ function ShareIcon({ name }: { name: "x" | "whatsapp" | "facebook" | "mail" }) {
   return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H21l-6.7 7.7L22 21h-6.1l-4.8-6.4L5.6 21H3.5l7.2-8.3L3 3h6.2l4.4 5.8L18.9 3Zm-2.2 16.2h1.2L8.5 4.7H7.2l9.5 14.5Z" /></svg>;
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+export default function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  return (
+    <div className="bg-cream">
+      <SiteHeader />
+      <Suspense fallback={<main id="main-content" className="flow-root min-h-screen bg-cream" aria-busy="true"><div className="mx-auto mt-[calc(7vh-20px)] max-w-[900px] px-5 text-center text-brand md:px-10">Loading article…</div></main>}>
+        <ArticleContent params={params} />
+      </Suspense>
+      <SiteFooter />
+      <FloatingCta />
+    </div>
+  );
+}
+
+async function ArticleContent({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const allPosts = await getBlogPosts();
   const articleSections = await getPageSections("/blog/article");
@@ -79,8 +93,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   ];
 
   return (
-    <div className="bg-cream">
-      <SiteHeader />
       <main id="main-content" className="flow-root bg-cream">
         <article>
           <header className="relative mx-auto mt-[calc(7vh-20px)] mb-[7vh] max-w-[900px] px-5 text-center md:px-10">
@@ -134,8 +146,5 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
       </main>
-      <SiteFooter />
-      <FloatingCta />
-    </div>
   );
 }

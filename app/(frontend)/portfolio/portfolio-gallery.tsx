@@ -60,24 +60,29 @@ export default function PortfolioGallery({ portfolioItems, labels }: { portfolio
 
         <div className="columns-1 gap-4 min-[601px]:columns-2 min-[901px]:columns-3">
           {visibleItems.map((item, index) => (
-            <div key={item.src} className="mb-4 break-inside-avoid overflow-hidden rounded-[20px]">
+            <div key={`${item.category}-${item.src || item.videoUrl}-${index}`} className="mb-4 break-inside-avoid overflow-hidden rounded-[20px]">
               <button
                 type="button"
-                aria-label={`View ${item.alt}`}
+                aria-label={`${item.videoUrl ? "Play" : "View"} ${item.alt}`}
                 onClick={(event) => { lastTrigger.current = event.currentTarget; setSelectedIndex(index); }}
                 className="group/portfolio relative block w-full cursor-pointer overflow-hidden rounded-[20px] border-0 bg-transparent p-0 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={item.width}
-                  height={item.height}
-                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                  className="block h-auto w-full transition-transform duration-[400ms] group-hover/portfolio:scale-[1.04] group-focus-visible/portfolio:scale-[1.04] motion-reduce:transition-none"
-                />
+                {item.src ? (
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                    className="block h-auto w-full transition-transform duration-[400ms] group-hover/portfolio:scale-[1.04] group-focus-visible/portfolio:scale-[1.04] motion-reduce:transition-none"
+                  />
+                ) : item.videoUrl ? (
+                  <video src={item.videoUrl} aria-hidden="true" muted playsInline preload="metadata" className="block aspect-video w-full object-cover" />
+                ) : null}
                 <span aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center bg-brand/55 text-[14px] font-semibold tracking-[1px] text-cream uppercase opacity-0 transition-opacity duration-300 group-hover/portfolio:opacity-100 group-focus-visible/portfolio:opacity-100 motion-reduce:transition-none">
                   {item.category === "interior" ? labels.interior : labels.exterior}
                 </span>
+                {item.videoUrl && <span aria-hidden="true" className="pointer-events-none absolute top-1/2 left-1/2 grid size-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-brand/85 text-cream shadow-lg transition-transform duration-300 group-hover/portfolio:scale-110 group-focus-visible/portfolio:scale-110"><svg viewBox="0 0 24 24" fill="currentColor" className="ml-1 size-6"><path d="m8 5 11 7-11 7V5Z" /></svg></span>}
               </button>
             </div>
           ))}
@@ -96,14 +101,18 @@ export default function PortfolioGallery({ portfolioItems, labels }: { portfolio
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`${selectedItem.alt} image viewer`}
+          aria-label={`${selectedItem.alt} ${selectedItem.videoUrl ? "video" : "image"} viewer`}
           onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedIndex(null); }}
           className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/90 px-14 py-16"
         >
-          <button ref={closeButton} type="button" aria-label="Close image viewer" onClick={() => setSelectedIndex(null)} className="absolute top-4 right-5 z-10 grid size-12 cursor-pointer place-items-center border-0 bg-transparent text-[34px] leading-none text-white focus-visible:outline-2 focus-visible:outline-white">×</button>
+          <button ref={closeButton} type="button" aria-label="Close viewer" onClick={() => setSelectedIndex(null)} className="absolute top-4 right-5 z-10 grid size-12 cursor-pointer place-items-center border-0 bg-transparent text-[34px] leading-none text-white focus-visible:outline-2 focus-visible:outline-white">×</button>
           <button type="button" aria-label="Previous image" onClick={() => setSelectedIndex((index) => index === null ? null : (index - 1 + visibleItems.length) % visibleItems.length)} className="absolute top-1/2 left-1 z-10 -translate-y-1/2 cursor-pointer border-0 bg-transparent p-3 text-[42px] leading-none text-white focus-visible:outline-2 focus-visible:outline-white sm:left-5">‹</button>
-          <div className="relative h-full w-full max-w-[1200px]">
-            <Image src={selectedItem.src} alt={selectedItem.alt} fill sizes="90vw" className="rounded-md object-contain" />
+          <div className="relative grid h-full w-full max-w-[1200px] place-items-center">
+            {selectedItem.videoUrl ? (
+              <video key={selectedItem.videoUrl} src={selectedItem.videoUrl} poster={selectedItem.src} aria-label={selectedItem.alt} controls autoPlay playsInline preload="metadata" className="max-h-full max-w-full rounded-md">Your browser does not support video playback.</video>
+            ) : selectedItem.src ? (
+              <Image src={selectedItem.src} alt={selectedItem.alt} fill sizes="90vw" className="rounded-md object-contain" />
+            ) : null}
           </div>
           <button type="button" aria-label="Next image" onClick={() => setSelectedIndex((index) => index === null ? null : (index + 1) % visibleItems.length)} className="absolute top-1/2 right-1 z-10 -translate-y-1/2 cursor-pointer border-0 bg-transparent p-3 text-[42px] leading-none text-white focus-visible:outline-2 focus-visible:outline-white sm:right-5">›</button>
         </div>

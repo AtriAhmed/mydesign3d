@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/cms";
 import { SiteSettingsProvider, type PublicSiteSettings } from "./components/site-settings-provider";
+import ThemeToggle from "./components/theme-toggle";
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta-sans",
@@ -10,9 +11,23 @@ const jakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.mydesign3d.com"),
   title: "MyDesign3D — Architecture, 3D Visualization & Web Solutions",
   description: "Architecture, design, and digital solutions from MyDesign3D.",
+  openGraph: {
+    type: "website",
+    siteName: "MyDesign3D",
+    images: [{
+      url: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "MyDesign3D homepage featuring architecture and digital design",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
@@ -56,7 +71,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         copyrightText: cms.copyrightText || "2026 © MyDesign3d. All rights reserved",
         termsUrl: cms.termsUrl || "https://www.mydesign3d.com/terms/",
         privacyUrl: cms.privacyUrl || "https://www.mydesign3d.com/privacy-policy/",
-      }}>{children}</SiteSettingsProvider></body>
+      }}>{children}<ThemeToggle /></SiteSettingsProvider></body>
     </html>
   );
 }

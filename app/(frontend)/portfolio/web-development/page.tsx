@@ -45,10 +45,11 @@ function BrowserPreview() {
 export default async function WebDevelopmentPortfolioPage() {
   const sections = await getPageSections("/portfolio/web-development");
   const intro = { ...listingDefaults.webPortfolio.intro, ...sections.intro };
-  const webProjects: WebProject[] = (await getProjects()).filter((project) => project.category === "web" && project.src).map((project) => ({
+  const webProjects: WebProject[] = (await getProjects()).filter((project) => project.category === "web" && (project.src || project.videoUrl)).map((project) => ({
     title: project.title,
     summary: project.summary,
     image: project.src,
+    videoUrl: project.videoUrl,
     imageAlt: project.alt,
     services: project.services,
     href: project.website,

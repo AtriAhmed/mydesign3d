@@ -1,6 +1,7 @@
 export type PortfolioItem = {
   category: "exterior" | "interior";
-  src: string;
+  src?: string;
+  videoUrl?: string;
   alt: string;
   width: number;
   height: number;

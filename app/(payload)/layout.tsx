@@ -1,5 +1,6 @@
 import config from "@payload-config";
 import "@payloadcms/next/css";
+import { connection } from "next/server";
 import type { ServerFunctionClient } from "payload";
 import { handleServerFunctions, RootLayout } from "@payloadcms/next/layouts";
 import React from "react";
@@ -11,6 +12,10 @@ const serverFunction: ServerFunctionClient = async (args) => {
   return handleServerFunctions({ ...args, config, importMap });
 };
 
-export default function PayloadLayout({ children }: { children: React.ReactNode }) {
+// Payload's admin shell renders request-specific values, including the current time.
+export const instant = false;
+
+export default async function PayloadLayout({ children }: { children: React.ReactNode }) {
+  await connection();
   return <RootLayout config={config} importMap={importMap} serverFunction={serverFunction}>{children}</RootLayout>;
 }

@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function PortfolioPage() {
-  const portfolioItems = (await getProjects()).filter((project) => (project.category === "exterior" || project.category === "interior") && project.src).map(({ category, src, alt, width, height }) => ({ category: category as "exterior" | "interior", src, alt, width, height }));
+  const portfolioItems = (await getProjects()).filter((project) => (project.category === "exterior" || project.category === "interior") && (project.src || project.videoUrl)).map(({ category, src, videoUrl, alt, width, height }) => ({ category: category as "exterior" | "interior", src, videoUrl, alt, width, height }));
   const sections = await getPageSections("/portfolio");
   const intro = { ...listingDefaults.portfolio.intro, ...sections.intro };
   return (

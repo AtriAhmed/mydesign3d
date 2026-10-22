@@ -33,6 +33,14 @@ const Media: CollectionConfig = {
   fields: [{ name: "alt", type: "text", required: true }],
 };
 
+const ProjectVideos: CollectionConfig = {
+  slug: "project-videos",
+  admin: { useAsTitle: "title", group: "Content", defaultColumns: ["title", "filename", "updatedAt"] },
+  access: { read: () => true, create: isEditor, update: isEditor, delete: isEditor },
+  upload: { staticDir: path.resolve(dirname, "media", "project-videos"), mimeTypes: ["video/mp4", "video/webm"] },
+  fields: [{ name: "title", type: "text", required: true }],
+};
+
 const Pages: CollectionConfig = {
   slug: "pages",
   admin: { useAsTitle: "title", group: "Website", defaultColumns: ["title", "path", "updatedAt"] },
@@ -116,10 +124,11 @@ const Projects: CollectionConfig = {
     { name: "summary", type: "textarea" },
     { name: "services", type: "array", fields: [{ name: "label", type: "text", required: true }] },
     { name: "image", type: "upload", relationTo: "media" },
-    { name: "imageUrl", type: "text", admin: { description: "Existing image path, until you upload a replacement." } },
+    { name: "imageUrl", type: "text", admin: { description: "Existing image path, or an optional poster for a video project." } },
     { name: "imageAlt", type: "text" },
     { name: "imageWidth", type: "number" },
     { name: "imageHeight", type: "number" },
+    { name: "video", type: "upload", relationTo: "project-videos", admin: { description: "Optional MP4 or WebM. When set, the portfolio displays this video instead of the image; the image becomes its poster." } },
     { name: "website", type: "text" },
     { name: "sortOrder", type: "number", defaultValue: 0 },
   ],
@@ -137,9 +146,9 @@ const SiteSettings: GlobalConfig = {
     { name: "consultationUrl", type: "text", defaultValue: "https://www.mydesign3d.com/book-a-free-consult/" },
     { name: "headerLogoUrl", type: "text", defaultValue: "/images/logo.png" },
     { name: "symbolLogoUrl", type: "text", defaultValue: "/images/service-icon.png" },
-    { name: "email", type: "email", defaultValue: "hello@mydesign3d.com" },
-    { name: "phone", type: "text", defaultValue: "+1 448 3333 996" },
-    { name: "homePhone", type: "text", defaultValue: "+1 (669) 333-3661" },
+    { name: "email", label: "Contact email address", type: "email", defaultValue: "hello@mydesign3d.com", admin: { description: "Shown in contact links and used as the recipient for service inquiries." } },
+    { name: "phone", label: "Contact phone number", type: "text", defaultValue: "+1 448 3333 996", admin: { description: "Shown in the inner-page footer and contact sections." } },
+    { name: "homePhone", label: "Home footer phone number", type: "text", defaultValue: "+1 (669) 333-3661", admin: { description: "Shown in the homepage footer." } },
     { name: "address", type: "text", defaultValue: "ST 62959, Sheridan- WY 82801" },
     { name: "footerDescription", type: "textarea", defaultValue: "Architectural Design . Web Services" },
     { name: "footerContactHeading", type: "text", defaultValue: "Get in touch" },
@@ -155,12 +164,12 @@ const SiteSettings: GlobalConfig = {
     { name: "serviceOfferHeading", type: "text", defaultValue: "What We Offer" },
     { name: "serviceDifferentHeading", type: "text", defaultValue: "Why we're different" },
     { name: "serviceProcessUrl", type: "text", defaultValue: "/about" },
-    { name: "serviceFormLabels", type: "json", defaultValue: {
+    { name: "serviceFormLabels", label: "Service inquiry form wording", type: "json", defaultValue: {
       firstName: "Your name", lastName: "Last name", email: "Email", phone: "Phone number", message: "Message",
       firstNamePlaceholder: "John", lastNamePlaceholder: "Smith", emailPlaceholder: "your@mail.com", phonePlaceholder: "+01 200 40 3032",
       messagePlaceholder: "Briefly share what you’d like to discuss (optional)...",
       successMessage: "Your email app should open with the request ready to send.",
-    }, admin: { description: "Labels, placeholders, and confirmation text used on service inquiry forms.", components: { Field: "./app/(payload)/components/structured-json-field#StructuredJsonField" } } },
+    }, admin: { description: "Text shown beside or inside the service inquiry form fields. Email and phone here are labels and examples, not contact details.", components: { Field: "./app/(payload)/components/structured-json-field#StructuredJsonField" } } },
     { name: "pricingProcessSteps", type: "array", defaultValue: [
       { label: "Free discovery call — we scope your need" },
       { label: "Tailored proposal — one team, every service" },
@@ -180,14 +189,14 @@ const SiteSettings: GlobalConfig = {
 export default buildConfig({
   admin: {
     user: Users.slug,
-    theme: "light",
+    theme: "all",
     meta: { titleSuffix: " · MyDesign3D" },
     components: {
       graphics: { Logo: "./app/(payload)/components/admin-logo#AdminLogo" },
       beforeDashboard: ["./app/(payload)/components/admin-welcome#AdminWelcome"],
     },
   },
-  collections: [Users, Media, Pages, Posts, Comments, Projects],
+  collections: [Users, Media, ProjectVideos, Pages, Posts, Comments, Projects],
   globals: [SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "development-only-secret-change-before-deploy",

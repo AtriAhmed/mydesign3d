@@ -4,9 +4,9 @@
     "members": [
       { "name": "Amrou Lessis", "role": "Digital Marketing Manager", "image": "/images/team-amrou-lessis.jpg" },
       { "name": "Mahdi Bakkar", "role": "Senior IT Consultant", "image": "/images/team-mahdi-bakkar.jpg" },
-      { "name": "Nesrine Timoumi", "role": "Senior Developer", "image": "/images/team-nesrine-timoumi.jpg" },
       { "name": "Mahdi Boujdaria", "role": "Directeur Commercial", "image": "/images/team-mahdi-boujdaria.jpg" },
-      { "name": "Hilmi Hlioui", "role": "Senior Architect", "image": "/images/team-hilmi-hlioui.jpg" }
+      { "name": "Hilmi Hlioui", "role": "Senior Architect", "image": "/images/team-hilmi-hlioui.jpg" },
+      { "name": "Ahmed Atri", "role": "Senior Software Engineer", "image": "/images/team-ahmed-atri.png" }
     ],
     "consultationImage": "/images/team-consultation.jpg",
     "consultationHeading": "Call now or schedule a consultation",

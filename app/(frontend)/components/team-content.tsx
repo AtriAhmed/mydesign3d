@@ -9,6 +9,11 @@ import { useSiteSettings } from "./site-settings-provider";
 
 const buttonLabel = "relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 group-hover/contact:after:origin-left group-hover/contact:after:scale-x-100 group-focus-visible/contact:after:origin-left group-focus-visible/contact:after:scale-x-100";
 
+function displayName(fullName: string) {
+  const parts = fullName.trim().split(/\s+/);
+  return parts.length > 1 ? `${parts[0]} ${parts.at(-1)?.[0]}.` : parts[0];
+}
+
 export default function TeamContent() {
   const content = usePageSection("team", teamDefaults.team);
   const siteSettings = useSiteSettings();
@@ -29,13 +34,13 @@ export default function TeamContent() {
             >
               <Image
                 src={member.image}
-                alt={member.name}
+                alt={displayName(member.name)}
                 fill
                 sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1360px) 32vw, 410px"
                 className="object-cover transition-transform duration-500 hover:-translate-y-1 motion-reduce:transition-none"
               />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 flex min-h-[100px] flex-col items-center justify-end rounded-b-3xl bg-[linear-gradient(180deg,transparent_0%,#faf2ea_95%)] px-5 pt-10 pb-2.5 text-center md:min-h-[100px] md:pt-[60px] min-[64.0625rem]:min-h-[200px] min-[64.0625rem]:px-[30px] min-[64.0625rem]:pt-[100px]">
-                <h2 className="m-0 text-[20px] font-medium leading-[1.3] text-brand min-[64.0625rem]:text-[24px]">{member.name}</h2>
+                <h2 className="m-0 text-[20px] font-medium leading-[1.3] text-brand min-[64.0625rem]:text-[24px]">{displayName(member.name)}</h2>
                 <p className="m-0 mt-1 text-[10px] font-medium leading-[1.5] tracking-[3px] text-brand uppercase">{member.role}</p>
               </div>
             </motion.article>

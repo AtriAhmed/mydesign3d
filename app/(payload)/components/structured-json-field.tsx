@@ -11,9 +11,23 @@ const titleCase = (key: string) => key.replace(/([a-z])([A-Z])/g, "$1 $2").repla
 const clone = (value: JsonValue): JsonValue => JSON.parse(JSON.stringify(value));
 const isMediaKey = (key: string) => /image|photo|logo|video|background|file|thumbnail|portrait/i.test(key);
 const isLongText = (key: string, value: string) => value.length > 110 || /description|body|content|introduction|paragraph|excerpt|subtitle|address/i.test(key);
+const serviceFormFieldLabels: Record<string, string> = {
+  firstName: "First name field label",
+  lastName: "Last name field label",
+  email: "Email field label",
+  phone: "Phone field label",
+  message: "Message field label",
+  firstNamePlaceholder: "First name example text",
+  lastNamePlaceholder: "Last name example text",
+  emailPlaceholder: "Email example text",
+  phonePlaceholder: "Phone example text",
+  messagePlaceholder: "Message example text",
+  successMessage: "Confirmation message",
+};
 
-function ValueEditor({ label, value, onChange, template }: { label: string; value: JsonValue; onChange: (value: JsonValue) => void; template?: JsonValue }) {
+function ValueEditor({ label, value, onChange, template, fieldLabels }: { label: string; value: JsonValue; onChange: (value: JsonValue) => void; template?: JsonValue; fieldLabels?: Record<string, string> }) {
   const id = useId();
+  const displayLabel = fieldLabels?.[label] ?? titleCase(label);
   if (Array.isArray(value)) {
     const sample = value[0] ?? (Array.isArray(template) ? template[0] : undefined);
     return (
@@ -26,7 +40,7 @@ function ValueEditor({ label, value, onChange, template }: { label: string; valu
               <button type="button" disabled={index === value.length - 1} onClick={() => { const next = [...value]; [next[index + 1], next[index]] = [next[index], next[index + 1]]; onChange(next); }} aria-label={`Move ${titleCase(label)} item ${index + 1} down`}>↓</button>
               <button type="button" onClick={() => onChange(value.filter((_, itemIndex) => itemIndex !== index))} aria-label={`Remove ${titleCase(label)} item ${index + 1}`}>Remove</button>
             </div></div>
-            <ValueEditor label={isObject(item) ? "Details" : "Text"} value={item} template={sample} onChange={(nextItem) => onChange(value.map((current, itemIndex) => itemIndex === index ? nextItem : current))} />
+            <ValueEditor label={isObject(item) ? "Details" : "Text"} value={item} template={sample} fieldLabels={fieldLabels} onChange={(nextItem) => onChange(value.map((current, itemIndex) => itemIndex === index ? nextItem : current))} />
           </div>
         ))}
         <button type="button" className="md3d-field-array__add" onClick={() => onChange([...value, sample === undefined ? "" : clone(sample)])}>+ Add {titleCase(label).replace(/s$/, "")}</button>
@@ -35,17 +49,17 @@ function ValueEditor({ label, value, onChange, template }: { label: string; valu
   }
   if (isObject(value)) {
     const objectTemplate = isObject(template ?? null) ? template as JsonObject : null;
-    return <div className="md3d-field-object">{Object.entries(value).map(([key, child]) => <ValueEditor key={key} label={key} value={child} template={objectTemplate?.[key]} onChange={(nextChild) => onChange({ ...value, [key]: nextChild })} />)}</div>;
+    return <div className="md3d-field-object">{Object.entries(value).map(([key, child]) => <ValueEditor key={key} label={key} value={child} template={objectTemplate?.[key]} fieldLabels={fieldLabels} onChange={(nextChild) => onChange({ ...value, [key]: nextChild })} />)}</div>;
   }
   if (typeof value === "boolean") {
-    return <label className="md3d-field-checkbox" htmlFor={id}><input id={id} type="checkbox" checked={value} onChange={(event) => onChange(event.target.checked)} />{titleCase(label)}</label>;
+    return <label className="md3d-field-checkbox" htmlFor={id}><input id={id} type="checkbox" checked={value} onChange={(event) => onChange(event.target.checked)} />{displayLabel}</label>;
   }
   if (typeof value === "number") {
-    return <div className="md3d-field-control"><label htmlFor={id}>{titleCase(label)}</label><input id={id} type="number" value={value} onChange={(event) => onChange(event.target.value === "" ? 0 : Number(event.target.value))} /></div>;
+    return <div className="md3d-field-control"><label htmlFor={id}>{displayLabel}</label><input id={id} type="number" value={value} onChange={(event) => onChange(event.target.value === "" ? 0 : Number(event.target.value))} /></div>;
   }
   const textValue = value ?? "";
   const media = isMediaKey(label);
-  return <div className="md3d-field-control"><label htmlFor={id}>{titleCase(label)}</label>
+  return <div className="md3d-field-control"><label htmlFor={id}>{displayLabel}</label>
     {isLongText(label, textValue) && !media ? <textarea id={id} rows={Math.min(7, Math.max(3, Math.ceil(textValue.length / 75)))} value={textValue} onChange={(event) => onChange(event.target.value)} /> : <input id={id} type="text" value={textValue} onChange={(event) => onChange(event.target.value)} />}
     {media && <small>Use a site path, a full URL, or an uploaded file URL from <a href="/admin/collections/media" target="_blank" rel="noreferrer">Media ↗</a>.</small>}
   </div>;
@@ -62,10 +76,11 @@ export function StructuredJsonField({ path }: { path: string }) {
   const sections = path === "sections" && isObject(value) ? Object.entries(value) : null;
   const currentKey = sections?.some(([key]) => key === active) ? active : sections?.[0]?.[0];
   const currentValue = sections?.find(([key]) => key === currentKey)?.[1];
+  const isServiceForm = path === "serviceFormLabels";
   return <div className="md3d-content-editor">
     {sections ? <><div className="md3d-content-editor__tabs" role="tablist" aria-label="Page sections">{sections.map(([key]) => <button key={key} type="button" role="tab" aria-selected={currentKey === key} className={currentKey === key ? "is-active" : ""} onClick={() => setActive(key)}>{titleCase(key)}</button>)}</div>
       {currentKey && currentValue !== undefined && <div className="md3d-content-editor__panel" role="tabpanel"><div className="md3d-content-editor__heading"><h3>{titleCase(currentKey)}</h3><p>Edit text, links, images, and list items for this section. Save the page to publish your changes.</p></div><ValueEditor label={currentKey} value={currentValue} template={isObject(originalShape) ? originalShape[currentKey] : undefined} onChange={(next) => setValue({ ...(value as JsonObject), [currentKey]: next })} /></div>}
-    </> : <ValueEditor label="Navigation" value={value} template={originalShape ?? undefined} onChange={setValue} />}
+    </> : <>{isServiceForm && <div className="md3d-content-editor__heading"><h3>Service inquiry form wording</h3><p>These fields control the form labels and example text. To change where inquiries are sent, edit Contact email address above.</p></div>}<ValueEditor label={isServiceForm ? "Form wording" : "Navigation"} value={value} template={originalShape ?? undefined} fieldLabels={isServiceForm ? serviceFormFieldLabels : undefined} onChange={setValue} /></>}
     <div className="md3d-content-editor__advanced"><button type="button" onClick={() => setShowSource(!showSource)}>{showSource ? "Hide" : "Show"} advanced JSON editor</button>{showSource && <SourceEditor key={JSON.stringify(value)} value={value} onApply={(next) => { setValue(next); setSourceError(""); }} error={sourceError} setError={setSourceError} />}</div>
   </div>;
 }

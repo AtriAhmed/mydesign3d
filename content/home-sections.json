@@ -1,6 +1,6 @@
 {
   "hero": {
-    "videoUrl": "https://www.mydesign3d.com/wp-content/uploads/2026/02/5946481_Office_Rendering_3840x2160.mp4",
+    "videoUrl": "/videos/5946481_Office_Rendering_3840x2160.mp4",
     "disciplines": ["Design", "Architecture", "Digital Factory"],
     "heading": "Multidisciplinary Design & Technology Firm — Architecture, 3D Visualization & Web Solutions",
     "tagline": "One Team. Every Solution. From Concept to Operation.",
@@ -18,7 +18,7 @@
     "headingPrefix": "Our",
     "headingAccent": "expertises",
     "items": [
-      { "name": "Architecture & Design", "image": null, "services": [{ "label": "3D Visualization & Rendering", "path": "3d-visualization-rendering" }, { "label": "Architectural Design & BIM", "path": "architectural-design-bim" }] },
+      { "name": "Architecture & Design", "image": "/images/architecture-offer.png", "services": [{ "label": "3D Visualization & Rendering", "path": "3d-visualization-rendering" }, { "label": "Architectural Design & BIM", "path": "architectural-design-bim" }] },
       { "name": "Digital Factory", "image": "/images/expertise-web.jpg", "services": [{ "label": "Web Development & Application Engineering", "path": "web-development-application-engineering" }, { "label": "UI/UX Design & Brand Identity", "path": "ux-ui-design-brand-identity" }] },
       { "name": "Company Setup", "image": "/images/expertise-company.jpg", "services": [{ "label": "Strategic Consultation", "path": "strategic-consultation" }, { "label": "Business Planning & Company Formation", "path": "company-setup" }] },
       { "name": "Full Scale Projects", "image": "/images/expertise-projects.jpg", "services": [{ "label": "Full Scale Projects", "path": "full-scale-project" }] }

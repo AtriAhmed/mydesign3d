@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import BrandArrow from "./brand-arrow";
 import { usePageSection } from "./page-sections-provider";
 
-const teamDescription = "Our team operates across 5 countries — Turkey, Tunisia, Qatar, UAE, and Canada — bringing together expertise in architecture, design, and development. Majdi Boujdaria leads from Turkey; Amrou Lessis, Mahdi Bakkar, and Mahdi Boujdaria anchor the team from Tunisia; Hilmi drives operations from Qatar; Mariem Nabhen covers the UAE; and Nesrine brings her expertise from Canada. One team, one standard, no matter where in the world the work happens.";
+const teamDescription = "Our team operates across 4 countries — Turkey, Tunisia, Qatar, and the UAE — bringing together expertise in architecture, design, and development. Majdi Boujdaria leads from Turkey; Amrou Lessis, Mahdi Bakkar, and Mahdi Boujdaria anchor the team from Tunisia; Hilmi drives operations from Qatar; and Mariem Nabhen covers the UAE. One team, one standard, no matter where in the world the work happens.";
 
 const accordionItems = [
   {
