@@ -5,6 +5,8 @@ import { motion, useReducedMotion } from "motion/react";
 
 export type SoftwareTool = { name: string; src: string; width: number; height: number };
 
+const adobeAppIcons = new Set(["Adobe XD", "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"]);
+
 const defaultTools: SoftwareTool[] = [
   { name: "D5 Render", src: "/images/visualization-tools/D5-Render-logo-300x58.png", width: 300, height: 58 },
   { name: "Lumion", src: "/images/visualization-tools/lumion-300x80.png", width: 300, height: 80 },
@@ -21,7 +23,7 @@ export default function SoftwareTools({ tools = defaultTools }: { tools?: readon
   const reduceMotion = useReducedMotion();
 
   return (
-    <section aria-label="Software we use" className="mb-[14vh] bg-[#efefef] px-[30px] py-[30px]">
+    <section aria-label="Software we use" className="software-tools mb-[14vh] bg-[#efefef] px-[30px] py-[30px]">
       <ul className={`mx-auto grid max-w-[1280px] items-center gap-5 ${tools.length === 1 ? "grid-cols-1 justify-items-center" : `grid-cols-2 sm:grid-cols-3 ${tools.length === 5 ? "lg:grid-cols-5" : tools.length === 7 ? "lg:grid-cols-7" : tools.length === 8 ? "lg:grid-cols-8" : "lg:grid-cols-9"}`}`}>
         {tools.map((tool, index) => (
           <motion.li
@@ -38,7 +40,9 @@ export default function SoftwareTools({ tools = defaultTools }: { tools?: readon
               width={tool.width}
               height={tool.height}
               sizes={tools.length === 1 ? "300px" : "(min-width: 1024px) 125px, (min-width: 640px) 30vw, 45vw"}
-              className="h-auto w-full object-contain"
+              className={adobeAppIcons.has(tool.name)
+                ? "size-[80px] max-w-full object-cover object-center"
+                : "h-auto w-full object-contain"}
             />
           </motion.li>
         ))}

@@ -10,7 +10,10 @@ import { useSiteSettings } from "./site-settings-provider";
 const buttonLabel = "relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 group-hover/contact:after:origin-left group-hover/contact:after:scale-x-100 group-focus-visible/contact:after:origin-left group-focus-visible/contact:after:scale-x-100";
 
 function displayName(fullName: string) {
-  const parts = fullName.trim().split(/\s+/);
+  const name = fullName.trim();
+  if (name === "Mahdi Bakkar") return "Mahdi Ba.";
+  if (name === "Mahdi Boujdaria") return "Mahdi Bo.";
+  const parts = name.split(/\s+/);
   return parts.length > 1 ? `${parts[0]} ${parts.at(-1)?.[0]}.` : parts[0];
 }
 
