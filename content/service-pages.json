@@ -535,6 +535,8 @@
       "hero": {
         "variant": "ux",
         "titleId": "ux-ui-hero-title",
+        "imageSrc": "/images/ui-ux/UX-UI.png",
+        "imageAlt": "Design studio with workstations and a purple accent wall",
         "breadcrumb": "UI/UX Design & Brand Identity",
         "seoTitle": "UI/UX Design & Brand Identity — User Experience, Visual Identity & Design Systems",
         "seoTag": "h1",
@@ -599,6 +601,8 @@
       },
       "process": {
         "titleId": "ux-ui-process-title",
+        "imageSrc": "/images/ui-ux/uxui-carre-1.jpg",
+        "imageAlt": "Designers reviewing interface flows and color palettes at their workstations",
         "imageHeading": "Designed with purpose",
         "imageCaption": "Creative systems built for clarity, consistency, and meaningful user experiences.",
         "heading": "How we create design systems and brand experiences that connect",
@@ -609,7 +613,7 @@
       "offer": {
         "titleId": "ux-ui-offer-title",
         "subtitle": "Design services tailored to your brand, users, and business goals",
-        "imageSrc": "/images/ux-offer.png",
+        "imageSrc": "/images/ui-ux/we-offer-ux-ui-copy.png",
         "imageAlt": "Brand and interface designs displayed on a desktop monitor in a design studio",
         "services": [
           {
@@ -633,8 +637,8 @@
       "different": {
         "titleId": "ux-ui-different-title",
         "subtitle": "Design expertise built for clarity, consistency, and creative impact",
-        "imageSrc": "/images/expertise-web.jpg",
-        "imageAlt": "Interface design concept with connected screens and visual elements",
+        "imageSrc": "/images/ui-ux/ux-ui-design-brand.png",
+        "imageAlt": "UI and brand design workspace with multiple monitors and design references",
         "reasons": [
           {
             "title": "Strategic Design Thinking",
@@ -655,8 +659,8 @@
         "titleId": "ux-ui-contact-title",
         "title": "Let’s discuss your next creative project",
         "introduction": "Tell us about your brand, design, or user experience needs and our team will help you shape the right creative solution.",
-        "imageSrc": "/images/web-contact.png",
-        "imageAlt": "Team reviewing a digital interface together",
+        "imageSrc": "/images/ui-ux/lets-discuss-1.png",
+        "imageAlt": "Designers discussing a website layout and color palette at a desk",
         "imageHeading": "Tailored Creative Solutions",
         "imageCaption": "Flexible collaboration adapted to your brand goals, audience, and design needs.",
         "services": [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { consultationUrl } from "@/lib/consultation-url";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -122,7 +123,7 @@ async function ArticleContent({ params }: { params: Promise<{ slug: string }> })
             <Image src={siteSettings.symbolLogoUrl || "/images/service-icon.png"} alt="" width={56} height={56} className="mb-2 size-14 object-contain" />
             <p className="mx-auto mb-3 max-w-[760px] text-[16px] leading-[1.6] text-brand/80">{String(articleContact.description)}</p>
             <h2 id="article-contact-title" className="mx-auto mb-5 max-w-[700px] text-[clamp(24px,2.5vw,30px)] font-normal leading-[1.2]">{String(articleContact.title)}</h2>
-            <a href={siteSettings.consultationUrl || "https://www.mydesign3d.com/book-a-free-consult/"} className="group/article-cta inline-flex min-h-[45px] items-center gap-4 rounded-full bg-brand py-2 pr-2 pl-6 text-[12px] font-bold leading-none tracking-[1.2px] text-cream uppercase no-underline transition-[background-color,color] duration-300 hover:bg-cream hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-brand"><span className="relative after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 group-hover/article-cta:after:origin-left group-hover/article-cta:after:scale-x-100">{String(articleContact.button)}</span><span className="grid size-[31px] place-items-center rounded-full bg-mint text-brand transition-transform duration-300 group-hover/article-cta:scale-120"><BrandArrow /></span></a>
+            <a href={consultationUrl(siteSettings.consultationUrl)} className="group/article-cta inline-flex min-h-[45px] items-center gap-4 rounded-full bg-brand py-2 pr-2 pl-6 text-[12px] font-bold leading-none tracking-[1.2px] text-cream uppercase no-underline transition-[background-color,color] duration-300 hover:bg-cream hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-brand"><span className="relative after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-500 group-hover/article-cta:after:origin-left group-hover/article-cta:after:scale-x-100">{String(articleContact.button)}</span><span className="grid size-[31px] place-items-center rounded-full bg-mint text-brand transition-transform duration-300 group-hover/article-cta:scale-120"><BrandArrow /></span></a>
           </div>
         </section>
 

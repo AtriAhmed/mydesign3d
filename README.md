@@ -29,3 +29,5 @@ Open `http://localhost:3000/admin` and create the first administrator. Subsequen
 - **Content → Media:** upload replacement images and use their URLs in page sections. Post and project records can link directly to uploads.
 
 `npm run cms:seed` imports missing starter content and leaves existing edits intact. For schema changes, run `npm run cms:types`. Media is stored in the ignored `media/` directory; production hosting needs persistent storage for both PostgreSQL and uploaded media. Configure a production `DATABASE_URL`, `PAYLOAD_SECRET`, and `NEXT_PUBLIC_SITE_URL` before deployment.
+
+The consultation form saves requests in Payload under **Content → Consultation Requests**. On an existing production database, run `npm run cms:migrate:consultation` once after pulling the update and before restarting the app. The migration is safe to rerun. Requests are stored in PostgreSQL; email notifications require an SMTP adapter and are not configured by this project.

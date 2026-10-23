@@ -22,11 +22,23 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function UxUiDesignBrandIdentityPage() {
   const sections = await getPageSections("/ux-ui-design-brand-identity");
-  const section = (key: string) => (sections[key] ?? {}) as Record<string, never>;
+  const replacedImages: Record<string, string> = {
+    "/images/ux-offer.png": "/images/ui-ux/we-offer-ux-ui-copy.png",
+    "/images/expertise-web.jpg": "/images/ui-ux/ux-ui-design-brand.png",
+    "/images/web-contact.png": "/images/ui-ux/lets-discuss-1.png",
+  };
+  const section = (key: string) => {
+    const values = (sections[key] ?? {}) as Record<string, unknown>;
+    const imageSrc = values.imageSrc;
+    // Existing CMS pages may still contain the old default paths; keep custom edits intact.
+    return (typeof imageSrc === "string" && replacedImages[imageSrc]
+      ? { ...values, imageSrc: replacedImages[imageSrc] }
+      : values) as Record<string, never>;
+  };
   return (
     <div className="bg-[#fafaf7]">
       <SiteHeader />
-      <main id="main-content" className="pt-[80px] md:pt-[291px]">
+      <main id="main-content" className="pt-[80px] md:pt-[131px]">
         <ServiceHero
           variant="ux"
           titleId="ux-ui-hero-title"
@@ -38,6 +50,8 @@ export default async function UxUiDesignBrandIdentityPage() {
           rotatingWords={["UI/UX Design", "Brand Identity", "Graphic Design"]}
           description="We create intuitive digital experiences and distinctive visual identities that help businesses connect with their audiences. From user research and interface design to brand systems and graphics, our team turns complex ideas into clear, consistent designs."
           benefits={["Strategic design", "Reliable performance"]}
+          imageSrc="/images/ui-ux/UX-UI.png"
+          imageAlt="Design studio with workstations and a purple accent wall"
          {...section("hero")}/>
         <SoftwareTools
           tools={[
@@ -52,6 +66,8 @@ export default async function UxUiDesignBrandIdentityPage() {
          {...section("tools")}/>
         <ServiceProcess
           titleId="ux-ui-process-title"
+          imageSrc="/images/ui-ux/uxui-carre-1.jpg"
+          imageAlt="Designers reviewing interface flows and color palettes at their workstations"
           imageHeading="Designed with purpose"
           imageCaption="Creative systems built for clarity, consistency, and meaningful user experiences."
           heading="How we create design systems and brand experiences that connect"
@@ -62,7 +78,7 @@ export default async function UxUiDesignBrandIdentityPage() {
         <ServiceOffer
           titleId="ux-ui-offer-title"
           subtitle="Design services tailored to your brand, users, and business goals"
-          imageSrc="/images/ux-offer.png"
+          imageSrc="/images/ui-ux/we-offer-ux-ui-copy.png"
           imageAlt="Brand and interface designs displayed on a desktop monitor in a design studio"
           services={[
             { title: "Graphic Design", description: "Creative visual assets developed for communication, promotion, presentation, and consistent brand expression across touchpoints." },
@@ -74,8 +90,8 @@ export default async function UxUiDesignBrandIdentityPage() {
         <ServiceDifferent
           titleId="ux-ui-different-title"
           subtitle="Design expertise built for clarity, consistency, and creative impact"
-          imageSrc="/images/expertise-web.jpg"
-          imageAlt="Interface design concept with connected screens and visual elements"
+          imageSrc="/images/ui-ux/ux-ui-design-brand.png"
+          imageAlt="UI and brand design workspace with multiple monitors and design references"
           reasons={[
             { title: "Strategic Design Thinking", description: "We combine creative direction, user understanding, and brand strategy to design solutions with purpose and impact." },
             { title: "Visual Consistency Across Touchpoints", description: "We create cohesive visual systems that strengthen recognition, improve communication, and support long-term brand value." },
@@ -87,8 +103,8 @@ export default async function UxUiDesignBrandIdentityPage() {
           titleId="ux-ui-contact-title"
           title="Let’s discuss your next creative project"
           introduction="Tell us about your brand, design, or user experience needs and our team will help you shape the right creative solution."
-          imageSrc="/images/web-contact.png"
-          imageAlt="Team reviewing a digital interface together"
+          imageSrc="/images/ui-ux/lets-discuss-1.png"
+          imageAlt="Designers discussing a website layout and color palette at a desk"
           imageHeading="Tailored Creative Solutions"
           imageCaption="Flexible collaboration adapted to your brand goals, audience, and design needs."
           services={["UI/UX Design", "Brand Identity", "Graphic Design", "Design Systems", "Marketing Assets", "Presentation Design", "Custom Request"]}

@@ -110,6 +110,22 @@ const Comments: CollectionConfig = {
   ],
 };
 
+const ConsultationRequests: CollectionConfig = {
+  slug: "consultation-requests",
+  labels: { singular: "Consultation Request", plural: "Consultation Requests" },
+  admin: { useAsTitle: "email", group: "Content", defaultColumns: ["firstName", "lastName", "email", "service", "status", "createdAt"] },
+  access: { read: isEditor, create: isEditor, update: isEditor, delete: isEditor },
+  fields: [
+    { name: "firstName", type: "text", required: true, maxLength: 100 },
+    { name: "lastName", type: "text", required: true, maxLength: 100 },
+    { name: "email", type: "email", required: true },
+    { name: "phone", type: "text", required: true, maxLength: 40 },
+    { name: "service", type: "text", required: true, maxLength: 100 },
+    { name: "message", type: "textarea", maxLength: 3000 },
+    { name: "status", type: "select", required: true, defaultValue: "new", options: ["new", "contacted", "closed"], index: true },
+  ],
+};
+
 const Projects: CollectionConfig = {
   slug: "projects",
   admin: { useAsTitle: "title", group: "Content", defaultColumns: ["title", "category", "updatedAt"] },
@@ -143,7 +159,7 @@ const SiteSettings: GlobalConfig = {
     { name: "siteName", type: "text", defaultValue: "MyDesign3D" },
     { name: "consultationLabel", type: "text", defaultValue: "Consultation" },
     { name: "floatingLabel", type: "text", defaultValue: "Book a Free Consultation" },
-    { name: "consultationUrl", type: "text", defaultValue: "https://www.mydesign3d.com/book-a-free-consult/" },
+    { name: "consultationUrl", type: "text", defaultValue: "/book-a-free-consult/" },
     { name: "headerLogoUrl", type: "text", defaultValue: "/images/logo.png" },
     { name: "symbolLogoUrl", type: "text", defaultValue: "/images/service-icon.png" },
     { name: "email", label: "Contact email address", type: "email", defaultValue: "hello@mydesign3d.com", admin: { description: "Shown in contact links and used as the recipient for service inquiries." } },
@@ -196,7 +212,7 @@ export default buildConfig({
       beforeDashboard: ["./app/(payload)/components/admin-welcome#AdminWelcome"],
     },
   },
-  collections: [Users, Media, ProjectVideos, Pages, Posts, Comments, Projects],
+  collections: [Users, Media, ProjectVideos, Pages, Posts, Comments, ConsultationRequests, Projects],
   globals: [SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "development-only-secret-change-before-deploy",

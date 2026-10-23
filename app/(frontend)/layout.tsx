@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/cms";
+import { consultationUrl } from "@/lib/consultation-url";
 import { SiteSettingsProvider, type PublicSiteSettings } from "./components/site-settings-provider";
 import ThemeToggle from "./components/theme-toggle";
 
@@ -41,7 +42,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         siteName: cms.siteName || "MyDesign3D",
         consultationLabel: cms.consultationLabel || "Consultation",
         floatingLabel: cms.floatingLabel || "Book a Free Consultation",
-        consultationUrl: cms.consultationUrl || "https://www.mydesign3d.com/book-a-free-consult/",
+        consultationUrl: consultationUrl(cms.consultationUrl),
         headerLogoUrl: cms.headerLogoUrl || "/images/logo.png",
         symbolLogoUrl: cms.symbolLogoUrl || "/images/service-icon.png",
         email: cms.email || "hello@mydesign3d.com",

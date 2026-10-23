@@ -26,7 +26,7 @@ export default async function WebDevelopmentApplicationEngineeringPage() {
   return (
     <div className="bg-[#fafaf7]">
       <SiteHeader />
-      <main id="main-content" className="pt-[80px] md:pt-[291px]">
+      <main id="main-content" className="pt-[80px] md:pt-[131px]">
         <ServiceHero
           variant="web"
           titleId="web-development-hero-title"

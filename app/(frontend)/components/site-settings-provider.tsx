@@ -46,7 +46,7 @@ const defaults: PublicSiteSettings = {
   siteName: "MyDesign3D",
   consultationLabel: "Consultation",
   floatingLabel: "Book a Free Consultation",
-  consultationUrl: "https://www.mydesign3d.com/book-a-free-consult/",
+  consultationUrl: "/book-a-free-consult/",
   headerLogoUrl: "/images/logo.png",
   symbolLogoUrl: "/images/service-icon.png",
   email: "hello@mydesign3d.com",

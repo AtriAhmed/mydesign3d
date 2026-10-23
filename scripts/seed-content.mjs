@@ -23,6 +23,7 @@ const aboutSections = JSON.parse(fs.readFileSync("content/about-sections.json", 
 const teamSections = JSON.parse(fs.readFileSync("content/team-sections.json", "utf8"));
 const pricingSections = JSON.parse(fs.readFileSync("content/pricing-sections.json", "utf8"));
 const contactSections = JSON.parse(fs.readFileSync("content/contact-sections.json", "utf8"));
+const consultationSections = JSON.parse(fs.readFileSync("content/consultation-sections.json", "utf8"));
 const listingSections = JSON.parse(fs.readFileSync("content/listing-sections.json", "utf8"));
 const navigation = JSON.parse(fs.readFileSync("content/navigation.json", "utf8"));
 const fullScaleSections = JSON.parse(fs.readFileSync("content/full-scale-sections.json", "utf8"));
@@ -32,7 +33,7 @@ const seo = JSON.parse(fs.readFileSync("content/seo.json", "utf8"));
 
 const settings = await payload.findGlobal({ slug: "site-settings" });
 const globalDefaults = {
-  consultationUrl: "https://www.mydesign3d.com/book-a-free-consult/",
+  consultationUrl: "/book-a-free-consult/",
   headerLogoUrl: "/images/logo.png",
   symbolLogoUrl: "/images/service-icon.png",
   footerContactHeading: "Get in touch",
@@ -70,6 +71,38 @@ for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
   await payload.create({ collection: "pages", data: { title: service?.title ?? entry.name.replaceAll("-", " ").replace(/\b\w/g, (letter) => letter.toUpperCase()), path: route, sections: service?.sections ?? {} } });
 }
 
+// Refresh the original UI/UX images in pages seeded before the WordPress media was available.
+// A custom image selected in Payload takes precedence over these defaults.
+const uiUxRoute = "/ux-ui-design-brand-identity";
+const uiUxPage = await payload.find({ collection: "pages", where: { path: { equals: uiUxRoute } }, limit: 1 });
+if (uiUxPage.totalDocs) {
+  const defaults = servicePages.find((item) => item.path === uiUxRoute).sections;
+  const oldImages = {
+    offer: "/images/ux-offer.png",
+    different: "/images/expertise-web.jpg",
+    contact: "/images/web-contact.png",
+  };
+  const oldAlts = {
+    different: "Interface design concept with connected screens and visual elements",
+    contact: "Team reviewing a digital interface together",
+  };
+  const sections = uiUxPage.docs[0].sections || {};
+  const updatedSections = { ...sections };
+  for (const key of ["hero", "process", "offer", "different", "contact"]) {
+    const current = sections[key] || {};
+    const imageIsDefault = !current.imageSrc || current.imageSrc === oldImages[key] || current.imageSrc === defaults[key].imageSrc;
+    if (!imageIsDefault) continue;
+    updatedSections[key] = {
+      ...current,
+      imageSrc: defaults[key].imageSrc,
+      imageAlt: !current.imageAlt || current.imageAlt === oldAlts[key] ? defaults[key].imageAlt : current.imageAlt,
+    };
+  }
+  if (JSON.stringify(updatedSections) !== JSON.stringify(sections)) {
+    await payload.update({ collection: "pages", id: uiUxPage.docs[0].id, data: { sections: updatedSections } });
+  }
+}
+
 const home = await payload.find({ collection: "pages", where: { path: { equals: "/" } }, limit: 1 });
 if (!home.totalDocs) await payload.create({ collection: "pages", data: { title: "Home", path: "/", sections: homeSections } });
 else {
@@ -83,7 +116,7 @@ if (about.totalDocs) {
   if (JSON.stringify(merged) !== JSON.stringify(about.docs[0].sections)) await payload.update({ collection: "pages", id: about.docs[0].id, data: { sections: merged } });
 }
 
-for (const [route, defaults] of [["/our-team", teamSections], ["/pricing", pricingSections], ["/contact-us", contactSections], ["/blog", listingSections.blog], ["/blog/article", articleSections], ["/portfolio", listingSections.portfolio], ["/portfolio/web-development", listingSections.webPortfolio], ["/full-scale-project", fullScaleSections]]) {
+for (const [route, defaults] of [["/our-team", teamSections], ["/pricing", pricingSections], ["/contact-us", contactSections], ["/book-a-free-consult", consultationSections], ["/blog", listingSections.blog], ["/blog/article", articleSections], ["/portfolio", listingSections.portfolio], ["/portfolio/web-development", listingSections.webPortfolio], ["/full-scale-project", fullScaleSections]]) {
   const found = await payload.find({ collection: "pages", where: { path: { equals: route } }, limit: 1 });
   if (!found.totalDocs) {
     await payload.create({ collection: "pages", data: { title: route === "/portfolio/web-development" ? "Web Development Portfolio" : route.slice(1), path: route, sections: defaults } });

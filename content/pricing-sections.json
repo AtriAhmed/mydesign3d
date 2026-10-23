@@ -31,7 +31,7 @@
     "heading": "Get a tailored quote",
     "description": "Pricing adapts to your region & project scale. Let’s scope it together.",
     "ctaLabel": "Book a free consult →",
-    "ctaUrl": "https://www.mydesign3d.com/book-a-free-consult/",
+    "ctaUrl": "/book-a-free-consult/",
     "note": "Indicative starting prices in USD. Final quote depends on scope, region & complexity."
   }
 }

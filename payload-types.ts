@@ -73,6 +73,7 @@ export interface Config {
     pages: Page;
     posts: Post;
     comments: Comment;
+    'consultation-requests': ConsultationRequest;
     projects: Project;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
@@ -87,6 +88,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     comments: CommentsSelect<false> | CommentsSelect<true>;
+    'consultation-requests': ConsultationRequestsSelect<false> | ConsultationRequestsSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -297,6 +299,22 @@ export interface Comment {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "consultation-requests".
+ */
+export interface ConsultationRequest {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  service: string;
+  message?: string | null;
+  status: 'new' | 'contacted' | 'closed';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "projects".
  */
 export interface Project {
@@ -374,6 +392,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'comments';
         value: number | Comment;
+      } | null)
+    | ({
+        relationTo: 'consultation-requests';
+        value: number | ConsultationRequest;
       } | null)
     | ({
         relationTo: 'projects';
@@ -528,6 +550,21 @@ export interface CommentsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "consultation-requests_select".
+ */
+export interface ConsultationRequestsSelect<T extends boolean = true> {
+  firstName?: T;
+  lastName?: T;
+  email?: T;
+  phone?: T;
+  service?: T;
+  message?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "projects_select".
  */
 export interface ProjectsSelect<T extends boolean = true> {
@@ -603,8 +640,17 @@ export interface SiteSetting {
   consultationUrl?: string | null;
   headerLogoUrl?: string | null;
   symbolLogoUrl?: string | null;
+  /**
+   * Shown in contact links and used as the recipient for service inquiries.
+   */
   email?: string | null;
+  /**
+   * Shown in the inner-page footer and contact sections.
+   */
   phone?: string | null;
+  /**
+   * Shown in the homepage footer.
+   */
   homePhone?: string | null;
   address?: string | null;
   footerDescription?: string | null;
@@ -633,7 +679,7 @@ export interface SiteSetting {
   serviceDifferentHeading?: string | null;
   serviceProcessUrl?: string | null;
   /**
-   * Labels, placeholders, and confirmation text used on service inquiry forms.
+   * Text shown beside or inside the service inquiry form fields. Email and phone here are labels and examples, not contact details.
    */
   serviceFormLabels?:
     | {

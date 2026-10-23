@@ -4,6 +4,7 @@ import InnerPageFooter from "../components/inner-page-footer";
 import SiteHeader from "../components/site-header";
 import { getPageSections, getPageMetadata } from "@/lib/cms";
 import pricingDefaults from "@/content/pricing-sections.json";
+import { consultationUrl } from "@/lib/consultation-url";
 
 const defaultMetadata: Metadata = {
   title: "Pricing | MyDesign3D",
@@ -84,7 +85,7 @@ export default async function PricingPage() {
             <section aria-labelledby="pricing-quote-title" className="rounded-xl bg-brand p-8 text-center sm:p-10">
               <h3 id="pricing-quote-title" className="mb-2 text-[56px] font-bold leading-[1.15] text-white">{quote.heading}</h3>
               <p className="mb-5 text-[16px] leading-[1.6] text-[#d8c8e3]">{quote.description}</p>
-              <a href={quote.ctaUrl} className="inline-block rounded-lg bg-[#f7d2ff] px-8 py-[13px] text-[15px] font-bold text-brand no-underline transition-colors duration-200 hover:bg-mint focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7d2ff] motion-reduce:transition-none">{quote.ctaLabel}</a>
+              <a href={consultationUrl(quote.ctaUrl)} className="inline-block rounded-lg bg-[#f7d2ff] px-8 py-[13px] text-[15px] font-bold text-brand no-underline transition-colors duration-200 hover:bg-mint focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7d2ff] motion-reduce:transition-none">{quote.ctaLabel}</a>
             </section>
             <p className="mt-6 text-center text-[16px] text-[#9a8aa5]">{quote.note}</p>
           </div>
