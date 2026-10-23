@@ -5,6 +5,10 @@ import config from "../payload.config.ts";
 import { posts } from "../app/(frontend)/blog/posts.ts";
 import { portfolioItems } from "../app/(frontend)/portfolio/portfolio-data.ts";
 
+if (!process.env.DATABASE_URL || !process.env.PAYLOAD_SECRET) {
+  throw new Error("CMS seed requires DATABASE_URL and PAYLOAD_SECRET in the environment or an env file.");
+}
+
 const payload = await getPayload({ config });
 
 function addMissing(current, defaults) {
