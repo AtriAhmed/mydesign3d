@@ -96,6 +96,26 @@ body {
 
 ::selection { background: #070807e5; color: #fff; }
 
+/* Apply the logo-pink hover and white halo consistently to controls and CTAs. */
+html[data-theme="dark"] :is(button, [role="button"], input[type="button"], input[type="submit"], a[class*="hover:bg-"], a[class*="focus-visible:bg-"], a[class*="inline-flex"][class*="rounded-"], a[class*="inline-block"][class*="rounded-"]) {
+  transition-property: box-shadow, background-color, border-color, color, transform, scale;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+html[data-theme="dark"] :is(button, [role="button"], input[type="button"], input[type="submit"], a[class*="hover:bg-"], a[class*="focus-visible:bg-"], a[class*="inline-flex"][class*="rounded-"], a[class*="inline-block"][class*="rounded-"]):hover,
+html[data-theme="dark"] :is(button, [role="button"], input[type="button"], input[type="submit"], a[class*="hover:bg-"], a[class*="focus-visible:bg-"], a[class*="inline-flex"][class*="rounded-"], a[class*="inline-block"][class*="rounded-"]):focus-visible {
+  background-color: var(--theme-accent-hover, #e45da8) !important;
+  color: #352a44 !important;
+  box-shadow: 0 0 20px 4px #fffc !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="dark"] :is(button, [role="button"], input[type="button"], input[type="submit"], a[class*="hover:bg-"], a[class*="focus-visible:bg-"], a[class*="inline-flex"][class*="rounded-"], a[class*="inline-block"][class*="rounded-"]) {
+    transition-duration: 0.01ms;
+  }
+}
+
 .related-article-title {
   position: relative;
   display: inline-block;
